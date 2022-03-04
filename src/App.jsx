@@ -10,7 +10,8 @@ import Photo from "./modules/pages/Photo.jsx";
 import Projects from "./modules/pages/Projects.jsx";
 
 function App() {
-  window.location.href = "http://romandahm.com";
+  window.location.href =
+    "https://research.sc/participant/login/dynamic/19A4FC10-A5AF-4D47-9111-35ACE8F8F7DE";
   return (
     <div>
       <Router>
