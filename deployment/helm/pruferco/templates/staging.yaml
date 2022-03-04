@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+    name: pruferco-letsencrypt-staging
+    namespace: istio-system
+spec:
+    acme:
+        # Email address used for ACME registration
+        email: roman.dahm@gmx.de
+        server: https://acme-staging-v02.api.letsencrypt.org/directory
+        privateKeySecretRef:
+            # Name of a secret used to store the ACME account private key
+            name: pruferco-letsencrypt-staging-private-key
+        # Add a single challenge solver, HTTP01 using nginx
+        solvers:
+        - selector: {}
+          http01:
+            ingress:
+                class: istio
