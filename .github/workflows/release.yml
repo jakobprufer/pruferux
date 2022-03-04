@@ -80,7 +80,7 @@ jobs:
 
   deploy-to-production:
     runs-on: ubuntu-latest
-    needs: [publish-helm-chart, publish-bazel-containers, publish-containers]
+    needs: [publish-helm-chart, publish-containers]
     steps:
       - uses: actions/checkout@v2
       - id: query
