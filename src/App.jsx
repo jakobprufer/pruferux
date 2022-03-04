@@ -10,6 +10,7 @@ import Photo from "./modules/pages/Photo.jsx";
 import Projects from "./modules/pages/Projects.jsx";
 
 function App() {
+  window.location.href = "http://romandahm.com";
   return (
     <div>
       <Router>

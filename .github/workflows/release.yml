@@ -1,0 +1,111 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  publish-helm-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - id: query
+        uses: romnn/query-git-action@master
+
+      - uses: romnn/helm-deploy-action@master
+        with:
+          command: push
+          chart-dir: deployment/helm
+          chart: pruferco
+          force: true
+          chart-version: ${{ steps.query.outputs.stable_semver_version }}
+          app-version: ${{ steps.query.outputs.stable_docker_tag }}
+          repo: https://core.registry.romnn.com/chartrepo/pruferco
+          repo-username: ${{ secrets.CONTAINER_REG_USERNAME }}
+          repo-password: ${{ secrets.CONTAINER_REG_TOKEN }}
+          dependencies: >-
+            [
+              {
+                "repository": "https://charts.bitnami.com/bitnami",
+                "alias": "bitnami"
+              }
+            ]
+
+  publish-containers:
+    runs-on: ubuntu-latest
+    name: publish-${{ matrix.service.name }}-container
+    needs: publish-helm-chart
+    strategy:
+      fail-fast: false
+      matrix:
+        service:
+          - name: frontend
+            dockerfile: Dockerfile
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-buildx-action@v1
+      - id: query
+        uses: romnn/query-git-action@master
+
+      - name: Cache docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+      - name: Login to registry.romnn.com
+        uses: docker/login-action@v1
+        with:
+          registry: core.registry.romnn.com
+          username: ${{ secrets.CONTAINER_REG_USERNAME }}
+          password: ${{ secrets.CONTAINER_REG_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ${{ matrix.service.dockerfile }}
+          platforms: linux/amd64
+          push: true
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
+          build-args: |
+            version=${{ steps.query.outputs.stable_semver_version }}
+          tags: |
+            core.registry.romnn.com/pruferco/${{ matrix.service.name }}:latest
+            core.registry.romnn.com/pruferco/${{ matrix.service.name }}:${{ steps.query.outputs.stable_docker_tag }}
+
+  deploy-to-production:
+    runs-on: ubuntu-latest
+    needs: [publish-helm-chart, publish-containers]
+    steps:
+      - uses: actions/checkout@v2
+      - id: query
+        uses: romnn/query-git-action@master
+
+      - name: deploy to production
+        uses: romnn/helm-deploy-action@master
+        with:
+          command: upgrade
+          release: pruferco
+          chart: pruferco/pruferco
+          chart-version: ${{ steps.query.outputs.stable_semver_version }}
+          namespace: pruferco
+          timeout: 10m0s
+          repo: https://core.registry.romnn.com/chartrepo/pruferco
+          repo-alias: pruferco
+          repo-username: ${{ secrets.CONTAINER_REG_USERNAME }}
+          repo-password: ${{ secrets.CONTAINER_REG_TOKEN }}
+          github-token: ${{ github.token }}
+          values: |
+            global:
+              appVersion: ${{ steps.query.outputs.stable_docker_tag }}
+            registry:
+              name: core.registry.romnn.com
+              user: ${{ secrets.CONTAINER_REG_USERNAME }}
+              password: ${{ secrets.CONTAINER_REG_TOKEN }}
+        env:
+          KUBECONFIG_FILE: ${{ secrets.KUBECONFIG }}
