@@ -58,9 +58,8 @@ ingress:
         protocol: HTTP
       hosts:
         - prufer.co
-      tls:
-        httpsRedirect: true
-
+      # tls:
+        # httpsRedirect: true
     - port:
         name: https
         number: 443
