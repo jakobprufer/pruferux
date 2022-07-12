@@ -1,52 +1,73 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "pruferco.fullname" . -}}
+{{- $svcPort := .Values.service.port -}}
+{{- if and .Values.ingress.className (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
+  {{- if not (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class") }}
+  {{- $_ := set .Values.ingress.annotations "kubernetes.io/ingress.class" .Values.ingress.className}}
+  {{- end }}
+{{- end }}
+
+{{- range .Values.ingress.gateways }}
+{{- if and .tls .tls.credentialName }}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .tls.credentialName }}
+  namespace: istio-system
+  labels:
+    {{- include "pruferco.labels" $ | nindent 4 }}
+spec:
+  secretName: {{ .tls.credentialName }}
+  dnsNames:
+  {{- toYaml .hosts | nindent 2 }}
+  issuerRef:
+  {{- toYaml .issuerRef | nindent 4 }}
+{{ end }}
+{{ end }}
+
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "pruferco.labels" . | nindent 4 }}
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  {{- range .Values.ingress.gateways }}
+  - port:
+    {{- toYaml .port | nindent 6 }}
+    {{- with .tls }}
+    tls:
+      {{- toYaml .| nindent 6 }}
+    {{- end }}
+    hosts:
+    {{- toYaml .hosts | nindent 4 }}
+  {{ end }}
+
+---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: {{ $fullName }}
 spec:
   hosts:
-  - "*"
+    - "*"
   gateways:
-  {{- toYaml .Values.ingress.gateways | nindent 2 }}
+  - {{ $fullName }}
   http:
   - match:
     {{- toYaml .Values.ingress.match | nindent 4 }}
-    {{- if .Values.ingress.rewrite }}
+    {{- with .Values.ingress.rewrite }}
     rewrite:
-    {{- toYaml .Values.ingress.rewrite | nindent 6 }}
+    {{- toYaml . | nindent 4 }}
     {{- end }}
     route:
     - destination:
-        host: {{ $fullName }}
         port:
-          number: {{ .Values.service.port }}
-    corsPolicy:
-      allowOrigin:
-        - "*"
-      allowMethods:
-        - POST
-        - GET
-        - OPTIONS
-        - PUT
-        - DELETE
-      allowHeaders:
-        - grpc-timeout
-        - content-type
-        - keep-alive
-        - user-agent
-        - cache-control
-        - content-type
-        - content-transfer-encoding
-        - custom-header-1
-        - x-accept-content-transfer-encoding
-        - x-accept-response-streaming
-        - x-user-agent
-        - x-grpc-web
-      maxAge: 1728s
-      exposeHeaders:
-        - custom-header-1
-        - grpc-status
-        - grpc-message
-      allowCredentials: true
+          number: {{ $svcPort }}
+        host: {{ $fullName }}
 {{- end }}
