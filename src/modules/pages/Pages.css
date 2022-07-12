@@ -1,0 +1,162 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.displayText {
+  line-height: 2rem;
+  margin: 2rem 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+/* maybe other solution for this */
+
+.links {
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+
+.on {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.off {
+  color: #a1a1a1;
+}
+
+.page {
+  margin: 30px;
+  font-size: 1em;
+}
+
+.header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.headerMainline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sortExpansion {
+  text-align: right;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 2em;
+  /* maybe solve this with on individual item level */
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  margin-bottom: 2.5em;
+}
+
+.post {
+  margin-bottom: 1.5em;
+}
+
+.postHeader {
+  margin-bottom: 0.75rem;
+  /* margins need to be unified */
+}
+
+.postTitle {
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+.postReach {
+  color: #a1a1a1;
+  display: none;
+}
+
+.postCluster {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.postImg {
+  max-width: 49%;
+  margin-bottom: 0.4rem;
+}
+
+.footer {
+  font-weight: 500;
+  position: fixed;
+  padding-left: 30px;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+  left: 0;
+  bottom: -1px;
+  background-color: white;
+  width: 100%;
+}
+
+/* maybe in separate about css */
+.aboutCluster {
+  margin-top: 1.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
+.aboutImg1 {
+  grid-column: 1 / span 6;
+  grid-row: 1;
+  z-index: 1;
+  width: 100%;
+}
+
+.aboutImg2 {
+  grid-column: 8 / span 6;
+  grid-row: 1;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.aboutImg3 {
+  grid-column: 6 / span 6;
+  grid-row: 1;
+  padding-top: 150px;
+  z-index: 2;
+  width: 100%;
+}
+
+.aboutMeText {
+  position: relative;
+  top: -2.5rem;
+}
+
+.checkbox {
+  border-radius: 0;
+  border: solid black 1px;
+}
+
+.checkboxLabel {
+  padding-left: 0.5rem;
+  font-weight: 400;
+}
