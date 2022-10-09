@@ -60,7 +60,6 @@ ingress:
         - prufer.co
       tls:
         httpsRedirect: true
-
     - port:
         name: https
         number: 443
