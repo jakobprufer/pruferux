@@ -9,6 +9,8 @@ import Video from "./modules/pages/Video.jsx";
 import Photo from "./modules/pages/Photo.jsx";
 import Projects from "./modules/pages/Projects.jsx";
 import AboutMe from "./modules/pages/AboutMe.jsx";
+// temp
+import NYC from "./modules/pages/NYC";
 
 function App() {
   // window.location.href =
@@ -25,6 +27,7 @@ function App() {
           <Route path="/photo" element={<Photo />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/nyc" element={<NYC />} />
         </Routes>
       </Router>
     </div>

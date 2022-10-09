@@ -1,3 +1,9 @@
+/* 
+post - the preview of a project on the browsing pages
+project - the main page of a project
+ */
+
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
   display: none;
@@ -7,6 +13,19 @@
 .example {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+html {
+  margin: 0; 
+  padding: 0; 
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .displayText {
@@ -20,6 +39,17 @@ a {
 }
 /* maybe other solution for this */
 
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+/* maybe other solution for this */
+
 .links {
   line-height: 2.5rem;
   font-weight: 500;
@@ -27,41 +57,109 @@ a {
 
 .on {
   font-weight: 500;
-  text-decoration: underline;
 }
 
 .off {
+  font-weight: 400;
+}
+
+nav .on {
+  text-decoration: underline;
+}
+
+nav .off {
   color: #a1a1a1;
 }
 
 .page {
-  margin: 30px;
+  margin: 2rem;
   font-size: 1em;
+  max-width: 100%;
 }
 
 .header {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  margin-bottom: 1.5em;
 }
 
 .headerMainline {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
 }
 
-.sortExpansion {
+.sortOpen {
+  padding-top: 1rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 2em;
+}
+
+.sortClosed {
+  display: none;
+}
+
+
+
+/* SLIDING BETA - activate instead of headerMainline, sortOpen, sortClosed above. */
+
+/* .headerMainline {
+  position: relative;
+  top: -2rem;
+  left: -2rem;
+  padding: 2rem 0rem 1rem 0rem;
+  margin: 0rem 2rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+.sortOpen {
+  position: relative;
+  top: 0rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 2em;
+  transition: 0.2s;
+}
+
+.sortClosed {
+  position: relative;
+  top: -10rem;
   text-align: right;
   margin-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   line-height: 2em;
-  /* maybe solve this with on individual item level */
+  z-index: -1;
+  transition: 0.2s;
+} */
+
+.sortBy {
+  margin-left: auto;
 }
 
-.logo {
-  font-weight: 500;
+.turned {
+  display: inline-block;
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+.notTurned {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: 0.2s;
 }
 
 .filter {
@@ -69,11 +167,12 @@ a {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 1.2rem;
-  margin-bottom: 2.5em;
+  padding-bottom: 1rem;
 }
 
 .post {
-  margin-bottom: 1.5em;
+  margin: 1rem 0rem;
+  display: block;
 }
 
 .postHeader {
@@ -98,21 +197,30 @@ a {
   flex-wrap: wrap;
 }
 
-.postImg {
+.img1 {
+  width: 100%;
+  margin-bottom: 1rem;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.img22 {
   max-width: 49%;
   margin-bottom: 0.4rem;
+  aspect-ratio: 3/2;
+  object-fit: cover;
 }
 
 .footer {
   font-weight: 500;
-  position: fixed;
-  padding-left: 30px;
+  padding-left: 2rem;
   padding-top: 1.5em;
   padding-bottom: 2em;
   left: 0;
   bottom: -1px;
   background-color: white;
   width: 100%;
+  position: fixed;
 }
 
 /* maybe in separate about css */
@@ -159,4 +267,44 @@ a {
 .checkboxLabel {
   padding-left: 0.5rem;
   font-weight: 400;
+}
+
+.projectHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.projectTitle {
+  position: fixed;
+  top: 4rem;
+  padding-top: 1.5rem;
+  left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.projectPage {
+  margin-top: 8rem;
+}
+
+.year {
+  margin-left: auto;
+}
+
+article {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
 }

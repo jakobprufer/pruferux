@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Pages.css";
+import tate from "./samplefiles/JAKOB-1.jpg";
+import jp from "./samplefiles/21e.JPEG";
 
 function Music() {
+  const [showSort, setShowSort] = useState(false);
+
+  const toggleSort = () => {
+    setShowSort(!showSort);
+  };
+
   return (
     <div className="page">
       <div className="header">
         <div className="headerMainline">
-          <div className="logo">Prufer</div>
-          <div className="sortby">Sort by &darr;</div>
+          <div className="logo on">Prufer</div>
+          <button className="sortBy" onClick={toggleSort}>
+            <span> Sort by&nbsp;</span>
+            <span className={showSort ? "turned" : "notTurned"}>&darr;</span>
+          </button>
         </div>
-        {/* <div className="sortExpansion">
+        <div className={showSort ? "sortOpen" : "sortClosed"}>
           <a href="..." className="sortItem on">
             Relevance
           </a>
@@ -22,7 +33,7 @@ function Music() {
           <a href="..." className="sortItem off">
             Estimated Reach
           </a>
-        </div> */}
+        </div>
       </div>
       <nav className="filter">
         <a href="/music" className="navItem on">
@@ -44,6 +55,24 @@ function Music() {
           Thoughts
         </a>
       </nav>
+      <div className="post">
+        <div className="postHeader">
+          <div className="postTitle">Tate Onda (British hip hop project)</div>
+          <div className="postReach">(estimated reach: 20 people)</div>
+        </div>
+        <div className="postCluster">
+          <img src={tate} alt="" className="img1" />
+        </div>
+      </div>
+      <div className="post">
+        <div className="postHeader">
+          <div className="postTitle">Jakob Prufer (German hip hop project)</div>
+          <div className="postReach">(estimated reach: 20 people)</div>
+        </div>
+        <div className="postCluster">
+          <img src={jp} alt="" className="img1" />
+        </div>
+      </div>
     </div>
   );
 }
