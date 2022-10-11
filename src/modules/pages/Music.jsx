@@ -12,7 +12,7 @@ function Music() {
 
   return (
     <div className="page">
-      <div className="header">
+      <div className="header firstLine">
         <div className="headerMainline">
           <div className="logo on">Prufer</div>
           <button className="sortBy" onClick={toggleSort}>
@@ -20,22 +20,24 @@ function Music() {
             <span className={showSort ? "turned" : "notTurned"}>&darr;</span>
           </button>
         </div>
-        <div className={showSort ? "sortOpen" : "sortClosed"}>
-          <a href="..." className="sortItem on">
-            Relevance
-          </a>
-          <a href="..." className="sortItem off">
-            New to Old
-          </a>
-          <a href="..." className="sortItem off">
-            Old to New
-          </a>
-          <a href="..." className="sortItem off">
-            Estimated Reach
-          </a>
-        </div>
       </div>
-      <nav className="filter">
+      <div className={showSort ? "sortOpen" : "sortClosed"}>
+        <a href="..." className="sortItem on">
+          Relevance
+        </a>
+        <a href="..." className="sortItem off">
+          New to Old
+        </a>
+        <a href="..." className="sortItem off">
+          Old to New
+        </a>
+        <a href="..." className="sortItem off">
+          Estimated Reach
+        </a>
+      </div>
+      <nav
+        className={showSort ? "filter secondLineDown" : "filter secondLineUp"}
+      >
         <a href="/music" className="navItem on">
           Music
         </a>
@@ -55,24 +57,39 @@ function Music() {
           Thoughts
         </a>
       </nav>
-      <div className="post">
-        <div className="postHeader">
-          <div className="postTitle">Tate Onda (British hip hop project)</div>
-          <div className="postReach">(estimated reach: 20 people)</div>
+      <main className={showSort ? "contentDown" : "contentUp"}>
+        <div className="post">
+          <div className="postHeader">
+            <div className="postTitle">Tate Onda (British hip hop project)</div>
+            <div className="postReach">(estimated reach: 20 people)</div>
+          </div>
+          <div className="postCluster">
+            <img src={tate} alt="" className="img1" />
+          </div>
         </div>
-        <div className="postCluster">
-          <img src={tate} alt="" className="img1" />
+        <div className="post">
+          <div className="postHeader">
+            <div className="postTitle">
+              Jakob Prufer (German hip hop project)
+            </div>
+            <div className="postReach">(estimated reach: 20 people)</div>
+          </div>
+          <div className="postCluster">
+            <img src={jp} alt="" className="img1" />
+          </div>
         </div>
-      </div>
-      <div className="post">
-        <div className="postHeader">
-          <div className="postTitle">Jakob Prufer (German hip hop project)</div>
-          <div className="postReach">(estimated reach: 20 people)</div>
+        <div className="post">
+          <div className="postHeader">
+            <div className="postTitle">
+              Jakob Prufer (German hip hop project)
+            </div>
+            <div className="postReach">(estimated reach: 20 people)</div>
+          </div>
+          <div className="postCluster">
+            <img src={jp} alt="" className="img1" />
+          </div>
         </div>
-        <div className="postCluster">
-          <img src={jp} alt="" className="img1" />
-        </div>
-      </div>
+      </main>
     </div>
   );
 }

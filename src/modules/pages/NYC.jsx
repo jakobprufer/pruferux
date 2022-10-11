@@ -10,7 +10,7 @@ import ny4 from "./samplefiles/ny4.JPG";
 function NYC() {
   return (
     <div className="page">
-      <div className="projectHeader">
+      <div className="projectHeader firstLine">
         <div className="headerMainline">
           <a href="/home" className="logo off">
             Prufer
@@ -21,7 +21,7 @@ function NYC() {
           </a>
         </div>
       </div>
-      <div className="projectTitle">
+      <div className="projectTitle secondLineUp">
         <div className="postTitle">New York City</div>
         <div className="year">2015</div>
       </div>

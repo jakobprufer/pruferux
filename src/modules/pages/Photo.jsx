@@ -16,7 +16,7 @@ function Photo() {
 
   return (
     <div className="page">
-      <div className="header">
+      <div className="header firstLine">
         <div className="headerMainline">
           <div className="logo on">Prufer</div>
           <button className="sortBy" onClick={toggleSort}>
@@ -24,22 +24,24 @@ function Photo() {
             <span className={showSort ? "turned" : "notTurned"}>&darr;</span>
           </button>
         </div>
-        <div className={showSort ? "sortOpen" : "sortClosed"}>
-          <a href="..." className="sortItem on">
-            Relevance
-          </a>
-          <a href="..." className="sortItem off">
-            New to Old
-          </a>
-          <a href="..." className="sortItem off">
-            Old to New
-          </a>
-          <a href="..." className="sortItem off">
-            Estimated Reach
-          </a>
-        </div>
       </div>
-      <nav className="filter">
+      <div className={showSort ? "sortOpen" : "sortClosed"}>
+        <a href="..." className="sortItem on">
+          Relevance
+        </a>
+        <a href="..." className="sortItem off">
+          New to Old
+        </a>
+        <a href="..." className="sortItem off">
+          Old to New
+        </a>
+        <a href="..." className="sortItem off">
+          Estimated Reach
+        </a>
+      </div>
+      <nav
+        className={showSort ? "filter secondLineDown" : "filter secondLineUp"}
+      >
         <a href="/music" className="navItem off">
           Music
         </a>
@@ -59,45 +61,47 @@ function Photo() {
           Thoughts
         </a>
       </nav>
-      <a href="/nyc" className="post">
-        <div className="postHeader">
-          <div className="postTitle">New York City, 2015</div>
-          {/* year needs to be data */}
-          <div className="postReach">(estimated reach: 20 people)</div>
-        </div>
-        <div className="postCluster">
-          <img src={ny1} alt="" className="img22" />
-          <img src={ny2} alt="" className="img22" />
-          <img src={ny3} alt="" className="img22" />
-          <img src={ny4} alt="" className="img22" />
-        </div>
-      </a>
-      <a className="post">
-        <div className="postHeader">
-          <div className="postTitle">New York City, 2015</div>
-          {/* year needs to be data */}
-          <div className="postReach">(estimated reach: 20 people)</div>
-        </div>
-        <div className="postCluster">
-          <img src={ny1} alt="" className="img22" />
-          <img src={ny2} alt="" className="img22" />
-          <img src={ny3} alt="" className="img22" />
-          <img src={ny4} alt="" className="img22" />
-        </div>
-      </a>
-      <a className="post">
-        <div className="postHeader">
-          <div className="postTitle">New York City, 2015</div>
-          {/* year needs to be data */}
-          <div className="postReach">(estimated reach: 20 people)</div>
-        </div>
-        <div className="postCluster">
-          <img src={ny1} alt="" className="img22" />
-          <img src={ny2} alt="" className="img22" />
-          <img src={ny3} alt="" className="img22" />
-          <img src={ny4} alt="" className="img22" />
-        </div>
-      </a>
+      <main className={showSort ? "contentDown" : "contentUp"}>
+        <a href="/nyc" className="post">
+          <div className="postHeader">
+            <div className="postTitle">New York City, 2015</div>
+            {/* year needs to be data */}
+            <div className="postReach">(estimated reach: 20 people)</div>
+          </div>
+          <div className="postCluster">
+            <img src={ny1} alt="" className="img22" />
+            <img src={ny2} alt="" className="img22" />
+            <img src={ny3} alt="" className="img22" />
+            <img src={ny4} alt="" className="img22" />
+          </div>
+        </a>
+        <a className="post">
+          <div className="postHeader">
+            <div className="postTitle">New York City, 2015</div>
+            {/* year needs to be data */}
+            <div className="postReach">(estimated reach: 20 people)</div>
+          </div>
+          <div className="postCluster">
+            <img src={ny1} alt="" className="img22" />
+            <img src={ny2} alt="" className="img22" />
+            <img src={ny3} alt="" className="img22" />
+            <img src={ny4} alt="" className="img22" />
+          </div>
+        </a>
+        <a className="post">
+          <div className="postHeader">
+            <div className="postTitle">New York City, 2015</div>
+            {/* year needs to be data */}
+            <div className="postReach">(estimated reach: 20 people)</div>
+          </div>
+          <div className="postCluster">
+            <img src={ny1} alt="" className="img22" />
+            <img src={ny2} alt="" className="img22" />
+            <img src={ny3} alt="" className="img22" />
+            <img src={ny4} alt="" className="img22" />
+          </div>
+        </a>
+      </main>
       <footer className="footer">
         <div className="aboutMe">&darr; About Me</div>
       </footer>

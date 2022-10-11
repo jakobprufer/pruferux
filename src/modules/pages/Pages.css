@@ -77,74 +77,93 @@ nav .off {
   max-width: 100%;
 }
 
-.header {
-  margin-bottom: 1.5em;
+.firstLine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
 }
+
+.secondLineUp {
+  position: fixed;
+  top: 4rem;
+  padding-top: 1.5rem;
+  left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.secondLineDown {
+  position: fixed;
+  top: 13rem;
+  padding-top: 1rem;
+  left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.contentUp {
+  margin-top: 6rem;
+  transition: 0.2s;
+}
+
+.contentDown {
+  margin-top: 15rem;
+  transition: 0.2s;
+}
+
+/* .header {
+  margin-bottom: 1.5em;
+} */
 
 .headerMainline {
   padding-bottom: 1rem;
   border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  background-color: white;
-  z-index: 1;
 }
 
 .sortOpen {
-  padding-top: 1rem;
   text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   line-height: 2em;
-}
-
-.sortClosed {
-  display: none;
-}
-
-
-
-/* SLIDING BETA - activate instead of headerMainline, sortOpen, sortClosed above. */
-
-/* .headerMainline {
   position: relative;
-  top: -2rem;
-  left: -2rem;
-  padding: 2rem 0rem 1rem 0rem;
-  margin: 0rem 2rem;
-  border-bottom: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  background-color: white;
-  z-index: 1;
-}
-
-.sortOpen {
-  position: relative;
-  top: 0rem;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  line-height: 2em;
+  top: 2.8rem;
+  height: 0px;
   transition: 0.2s;
 }
 
 .sortClosed {
-  position: relative;
-  top: -10rem;
   text-align: right;
-  margin-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   line-height: 2em;
+  position: relative;
+  top: -5.5rem;
+  height: 0px;
+  transition: 0.2s;
   z-index: -1;
-  transition: 0.2s;
-} */
+}
 
 .sortBy {
   margin-left: auto;
@@ -166,12 +185,12 @@ nav .off {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1.2rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
+  z-index: 0;
 }
 
 .post {
-  margin: 1rem 0rem;
+  margin: 0rem 0rem 1rem 0rem;
   display: block;
 }
 
@@ -269,35 +288,9 @@ nav .off {
   font-weight: 400;
 }
 
-.projectHeader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-left: 2rem;
-  padding-top: 2rem;
-  padding-right: 2rem;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: white;
-}
-
 .projectTitle {
-  position: fixed;
-  top: 4rem;
-  padding-top: 1.5rem;
-  left: 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1rem;
-  box-sizing: border-box;
-  width: 100%;
   display: flex;
   margin-bottom: 1rem;
-  background-color: white;
-}
-
-.projectPage {
-  margin-top: 8rem;
 }
 
 .year {
@@ -307,4 +300,47 @@ nav .off {
 article {
   line-height: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.specialDateContainer {
+  height: 0px;
+  min-width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.specialDate {
+  margin-left: auto;
+  margin-top: 0.5rem;
+}
+
+.offLogo1 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 800;
+  font-size: 8rem;
+  mix-blend-mode: difference;
+  filter: invert(1);
+  z-index: 1;
+  /* background-image: url('./samplefiles/off1.jpg'); */
+}
+
+.offLogo2 {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 800;
+  font-size: 8rem;
+  color: white;
+  /* mix-blend-mode: difference;
+  filter: invert(1);
+  z-index: 1; */
+  position: relative;
+  left: -10.5rem;
+  z-index: -2;
+}
+
+.off1 {
+  width: 12rem;
+  position: relative;
+  top: -4rem;
+  left: 2rem;
+  z-index: -1;
 }
