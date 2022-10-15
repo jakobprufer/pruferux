@@ -1,0 +1,36 @@
+.stickyWrapper {
+    position: relative;
+    top: 0;
+    height: 7.2rem;
+  }
+  
+  .sticky .stickyInner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .slideContainer {
+    position: relative;
+    height: 440px;
+    z-index: 10;
+  }
+
+  .slide {
+    object-fit: cover;
+    max-width: 100%;
+    z-index: 10;
+    height: 500px;
+    /* z-index: 20;
+    position: relative; */
+  }
+
+  .slideLogo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    filter: invert(1);
+  }

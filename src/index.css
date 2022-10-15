@@ -122,3 +122,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+html {
+  margin: 0; 
+  padding: 0; 
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+} */
+/* maybe other solution for this */
+
+.button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}

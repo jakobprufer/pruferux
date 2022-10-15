@@ -19,10 +19,10 @@ function Photo() {
       <div className="header firstLine">
         <div className="headerMainline">
           <div className="logo on">Prufer</div>
-          <button className="sortBy" onClick={toggleSort}>
+          <div className="sortBy button" onClick={toggleSort}>
             <span> Sort by&nbsp;</span>
             <span className={showSort ? "turned" : "notTurned"}>&darr;</span>
-          </button>
+          </div>
         </div>
       </div>
       <div className={showSort ? "sortOpen" : "sortClosed"}>
