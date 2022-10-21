@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Pages.css";
 import download from "./samplefiles/download.png";
 import ny1 from "./samplefiles/ny1.JPG";
 import ny2 from "./samplefiles/ny2.JPG";

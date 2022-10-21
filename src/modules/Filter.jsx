@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./Modules.css";
 
-function MenuBar() {
+function Filter() {
   const [showSort, setShowSort] = useState(false);
 
   const toggleSort = () => {
@@ -36,4 +35,4 @@ function MenuBar() {
   );
 }
 
-export default MenuBar;
+export default Filter;

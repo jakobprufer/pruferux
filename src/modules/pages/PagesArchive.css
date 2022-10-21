@@ -1,0 +1,105 @@
+.page {
+  margin: 2rem;
+  font-size: 1em;
+  max-width: 100%;
+}
+
+.stickSection {
+  position: sticky;
+}
+
+.firstLine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+.secondLineUp {
+  position: fixed;
+  top: 4rem;
+  padding-top: 1.5rem;
+  left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.secondLineDown {
+  position: fixed;
+  top: 13rem;
+  padding-top: 1rem;
+  left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.contentUp {
+  margin-top: 6rem;
+  transition: 0.2s;
+}
+
+.contentDown {
+  margin-top: 15rem;
+  transition: 0.2s;
+}
+
+.headerMainline {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.sortOpen {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 2em;
+  position: relative;
+  top: 2.8rem;
+  height: 0px;
+  transition: 0.2s;
+}
+
+.sortClosed {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 2em;
+  position: relative;
+  top: -5.5rem;
+  height: 0px;
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.sortBy {
+  margin-left: auto;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding-bottom: 1rem; */
+  z-index: 0;
+}

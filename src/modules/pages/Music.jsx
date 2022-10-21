@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Pages.css";
 import tate from "./samplefiles/JAKOB-1.jpg";
 import jp from "./samplefiles/21e.JPEG";
 

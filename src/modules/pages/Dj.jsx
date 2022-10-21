@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Pages.css";
 import off1 from "./samplefiles/off1.jpg";
 
 function Dj() {

@@ -1,0 +1,425 @@
+/* general (rework this!) */
+.displayText {
+    line-height: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .links {
+    line-height: 2.5rem;
+    font-weight: 500;
+  }
+  
+  .on {
+    font-weight: 500;
+  }
+  
+  .off {
+    font-weight: 400;
+  }
+  
+  nav .on {
+    text-decoration: underline;
+  }
+  
+  nav .off {
+    color: #a1a1a1;
+  }
+
+
+/* home */
+.slideContainer {
+    position: relative;
+    height: 600px;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  .slideVideo {
+    object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
+    z-index: 10;
+  }
+
+  .slideLogo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    filter: invert(1);
+  }
+
+/* header & filter */
+.headerBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    transition: 0s;
+    background-color: rgba(255, 255, 255, 0) ;
+    color: rgb(255, 255, 255) ;
+    z-index: 20;
+}
+
+.headerBarAttached {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    font-weight: 400;
+    transition: 0s;
+    background-color: rgb(255, 255, 255) ;
+    height: 63px;
+}
+
+.logoBar {
+    position: relative;
+    padding: 1rem 2rem 0rem 2rem;
+    z-index: 20;
+}
+
+.logoContainer {
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    z-index: 20;
+}
+
+.logoBorderIn {
+    border-bottom: 1px solid black;
+    width: 100%;
+    opacity: 100%;
+    transition: 0.2s;
+    margin-left: auto;
+}
+
+.logoBorderOut {
+    border-bottom: 1px solid black;
+    width: 0%;
+    opacity: 0%;
+    transition: 0.2s;
+    margin-left: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.preLogoInnerIn {
+    overflow: hidden;
+    display:inline-block;
+    width: 2.9rem;
+    transition: 0.2s;
+    color: white;
+}
+
+.preLogoInnerOut {
+    overflow: hidden;
+    display:inline-block;
+    width: 0rem;
+    transition: 0.2s;
+    color: white;
+}
+
+.postLogoInnerIn {
+    overflow: hidden;
+    display:inline-block;
+    width: 11rem;
+    transition: 0.2s;
+    color: white;
+}
+
+.postLogoInnerOut {
+    overflow: hidden;
+    display:inline-block;
+    width: 0rem;
+    transition: 0.2s;
+    color: white;
+}
+
+.logoInner {
+    display: inline-block;
+}
+
+.sortButtonIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 4.3rem;
+    transition: 0.2s;
+}
+
+.sortButtonOut {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0rem;
+    transition: 0.2s;
+}
+
+.turned {
+    display: inline-block;
+    transform: rotate(180deg);
+    transition: 0.2s;
+  }
+  
+  .notTurned {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: 0.2s;
+  }
+
+.sortMenuUp {
+    position: relative;
+    top: 0rem;
+    height: 0rem;
+    overflow: hidden;
+    padding: 0rem 2rem;
+    line-height: 2rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    z-index: 0;
+    transition: 0.1s;
+    background-color: white;
+}
+
+.sortMenuDown {
+    position: relative;
+    top: 0rem;
+    height: 8rem;
+    overflow: hidden;
+    padding: 0.6rem 2rem 0.3rem 2rem;
+    line-height: 2rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    z-index: 0;
+    transition: 0.1s;
+    background-color: white;
+}
+
+.stickyWrapper {
+    position: relative;
+    top: 0;
+    height: 53px;
+    z-index: 5;
+    background-color: white;
+  }
+  
+  .stickyInner {
+    z-index: 5;
+    background-color: white;
+  }
+
+  .sticky .stickyInner {
+    position: fixed;
+    top: 63px;
+    left: 0;
+    right: 0;
+    transition: 0.1s;
+  }
+
+  .stickyDown .stickyInner {
+    position: fixed;
+    top: 12.8rem;
+    left: 0;
+    right: 0;
+    background-color: white;
+    transition: 0.1s;
+  }
+
+.filterBar {
+    padding: 0rem 2rem 0rem 2rem;
+    /* position: relative; */
+    height: 53px;
+}
+
+.filterContainer {
+    position: relative;
+    padding: 1.2rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+/* posts page */
+.content {
+    padding: 1rem 2rem;
+}
+
+.post {
+    margin: 0rem 0rem 1rem 0rem;
+    display: block;
+  }
+  
+  .postHeader {
+    margin-bottom: 0.75rem;
+    /* margins need to be unified */
+  }
+  
+  .postTitle {
+    font-weight: 500;
+    line-height: 1.2em;
+  }
+  
+  .postReach {
+    color: #a1a1a1;
+    display: none;
+  }
+  
+  .postCluster {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .img1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+  
+  .img22 {
+    max-width: 49%;
+    margin-bottom: 0.4rem;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+
+    /* special post */
+    .specialDateContainer {
+        height: 0px;
+        min-width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+      
+      .specialDate {
+        margin-left: auto;
+        margin-top: 0.5rem;
+      }
+      
+      .offLogo1 {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 800;
+        font-size: 8rem;
+        mix-blend-mode: difference;
+        filter: invert(1);
+        z-index: 1;
+        /* background-image: url('./samplefiles/off1.jpg'); */
+      }
+      
+      .offLogo2 {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 800;
+        font-size: 8rem;
+        color: white;
+        /* mix-blend-mode: difference;
+        filter: invert(1);
+        z-index: 1; */
+        position: relative;
+        left: -10.5rem;
+        z-index: -2;
+      }
+      
+      .off1 {
+        width: 12rem;
+        position: relative;
+        top: -4rem;
+        left: 2rem;
+        z-index: -1;
+      }
+  
+  /* footer */
+  .footer {
+    font-weight: 500;
+    padding-left: 2rem;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
+    left: 0;
+    bottom: -1px;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+  }
+  
+  /* about page */
+  .aboutCluster {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+  
+  .aboutImg1 {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .aboutImg2 {
+    grid-column: 8 / span 6;
+    grid-row: 1;
+    z-index: 1;
+    max-width: 100%;
+  }
+  
+  .aboutImg3 {
+    grid-column: 6 / span 6;
+    grid-row: 1;
+    padding-top: 150px;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .aboutMeText {
+    position: relative;
+    top: -2.5rem;
+  }
+  
+  .checkbox {
+    border-radius: 0;
+    border: solid black 1px;
+  }
+  
+  .checkboxLabel {
+    padding-left: 0.5rem;
+    font-weight: 400;
+  }
+  
+  /* project page */
+  .projectTitle {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .year {
+    margin-left: auto;
+  }
+  
+  article {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }

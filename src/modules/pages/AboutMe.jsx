@@ -1,5 +1,4 @@
 import React from "react";
-import "./Pages.css";
 import aboutme1 from "./samplefiles/aboutme1.JPEG";
 import aboutme2 from "./samplefiles/aboutme2.jpg";
 import aboutme3 from "./samplefiles/aboutme3.jpg";
