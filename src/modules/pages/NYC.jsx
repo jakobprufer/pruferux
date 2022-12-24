@@ -1,43 +1,82 @@
-import React from "react";
-import download from "./samplefiles/download.png";
-import ny1 from "./samplefiles/ny1.JPG";
-import ny2 from "./samplefiles/ny2.JPG";
-import ny3 from "./samplefiles/ny3.JPG";
-import ny4 from "./samplefiles/ny4.JPG";
-// import process for images needs to be optimised
+import React, { Fragment, useEffect, useRef, useState } from "react";
+import classNames from "classnames";
+import { NavLink } from "react-router-dom";
+
+// data
+import { Projects } from "../../data.js";
+
+// components
+import Filter from "../Filter.jsx";
+import HomeSlide from "../HomeSlide.jsx";
+import Header from "../Header";
 
 function NYC() {
+  // attach header
+  const [attach, setAttach] = useState(false);
+  // const [isSticky, setSticky] = useState(false);
+  const ref = useRef(null);
+  // const handleScroll = () => {
+  //   if (ref.current) {
+  //     setSticky(ref.current.getBoundingClientRect().top <= 0);
+  //   }
+  // };
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      attachHeader();
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        attachHeader();
+      });
+    };
+  }, []);
+  const attachHeader = () => {
+    if (ref.current.getBoundingClientRect().top <= 55) {
+      setAttach(true);
+    } else {
+      setAttach(false);
+      setShowSort(false);
+    }
+  };
+
+  // toggle sortMenu
+  const [showSort, setShowSort] = useState(false);
+
+  const toggleSort = () => {
+    setShowSort(!showSort);
+  };
+
+  // select current project
+  const current = Projects.find((item) => item.alias === "nyc");
+
   return (
-    <div className="page">
-      <div className="projectHeader firstLine">
-        <div className="headerMainline">
-          <a href="/home" className="logo off">
-            Prufer
-          </a>
-          <div className="arrow">&nbsp;&nbsp;&rarr;&nbsp;&nbsp;</div>
-          <a href="/photo" className="subPage on">
-            Photo
-          </a>
+    <div>
+      <Header attach showSort={false} toggleSort={toggleSort} />
+      <div
+        className={classNames(
+          "stickyWrapper",
+          { sticky: !showSort },
+          { stickyDown: showSort }
+        )}
+        ref={ref}
+      ></div>
+      <main className="project">
+        <div className="projectTitle">
+          <div className="postTitle">{current.title}</div>
+          <div className="year">{current.yFinished}</div>
         </div>
-      </div>
-      <div className="projectTitle secondLineUp">
-        <div className="postTitle">New York City</div>
-        <div className="year">2015</div>
-      </div>
-      <div className="projectPage">
-        <article>
-          During the summer of 2015, i spent 6 weeks visiting my uncle in
-          Manhattan. Days and evenings I was wondering around the city on my
-          own, taking pictures as I went - but mostly trying to hide my chunky
-          DSLR camera to seem more local. I'd say this holiday was
-          transformative for me, I returned more mature and independent, having
-          left my "home bubble" for the first time.
-        </article>
-        <img src={ny1} alt="" className="img1" />
-        <img src={ny2} alt="" className="img1" />
-        <img src={ny3} alt="" className="img1" />
-        <img src={ny4} alt="" className="img1" />
-      </div>
+        <div className="projectPage">
+          <article>{current.description1}</article>
+          {current.images.map((image, index) => (
+            <div className="imgGridProject">
+              <img src={image} alt="" key={index} />
+            </div>
+          ))}
+        </div>
+      </main>
+      <footer className="footer">
+        <div className="aboutMe">&darr; About Me</div>
+      </footer>
     </div>
   );
 }

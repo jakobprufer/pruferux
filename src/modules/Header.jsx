@@ -6,7 +6,9 @@ function Header({ attach, showSort, toggleSort }) {
       <div className="logoBar">
         <div className="logoContainer">
           <div className="logo">
-            <div className={attach ? "preLogoInnerOut" : "preLogoInnerIn"}>
+            <div
+              className={attach ? "preLogoInnerOut on" : "preLogoInnerIn on"}
+            >
               Jakob&nbsp;
             </div>
             <div className="logoInner on">Prufer</div>

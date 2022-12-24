@@ -1,14 +1,14 @@
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import classNames from "classnames";
+import { NavLink } from "react-router-dom";
+
+// data
+import { Projects } from "../../data.js";
 
 // components
 import Filter from "../Filter.jsx";
 import HomeSlide from "../HomeSlide.jsx";
 import Header from "../Header";
-
-// sample files
-import tate from "./samplefiles/JAKOB-1.jpg";
-import jp from "./samplefiles/21e.JPEG";
 
 function Home() {
   // attach header
@@ -31,7 +31,7 @@ function Home() {
     };
   }, []);
   const attachHeader = () => {
-    if (ref.current.getBoundingClientRect().top <= 63) {
+    if (ref.current.getBoundingClientRect().top <= 55) {
       setAttach(true);
     } else {
       setAttach(false);
@@ -61,47 +61,20 @@ function Home() {
         <Filter />
       </div>
       <main className="content">
-        <div className="post">
-          <div className="postHeader">
-            <div className="postTitle">Tate Onda (British hip hop project)</div>
-            <div className="postReach">(estimated reach: 20 people)</div>
-          </div>
-          <div className="postCluster">
-            <img src={tate} alt="" className="img1" />
-          </div>
-        </div>
-        <div className="post">
-          <div className="postHeader">
-            <div className="postTitle">
-              Jakob Prufer (German hip hop project)
-            </div>
-            <div className="postReach">(estimated reach: 20 people)</div>
-          </div>
-          <div className="postCluster">
-            <img src={jp} alt="" className="img1" />
-          </div>
-        </div>
-        <div className="post">
-          <div className="postHeader">
-            <div className="postTitle">
-              Jakob Prufer (German hip hop project)
-            </div>
-            <div className="postReach">(estimated reach: 20 people)</div>
-          </div>
-          <div className="postCluster">
-            <img src={jp} alt="" className="img1" />
-          </div>
-        </div>
-        <div className="post">
-          <div className="postHeader">
-            <div className="postTitle">
-              Jakob Prufer (German hip hop project)
-            </div>
-            <div className="postReach">(estimated reach: 20 people)</div>
-          </div>
-          <div className="postCluster">
-            <img src={jp} alt="" className="img1" />
-          </div>
+        <div className="posts">
+          {Projects.map((project, index) => (
+            <NavLink to={"/" + project.alias} className="post" key={index}>
+              <div className="postHeader">
+                <div className="postTitle">{project.title}</div>
+                <div className="postReach">{project.reach}</div>
+              </div>
+              <div className={project.previewCluster}>
+                {project.previewImages.map((image, index) => (
+                  <img src={image} alt="" key={index} />
+                ))}
+              </div>
+            </NavLink>
+          ))}
         </div>
       </main>
       <footer className="footer">

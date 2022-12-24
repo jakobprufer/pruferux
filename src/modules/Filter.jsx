@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Filter() {
   const [showSort, setShowSort] = useState(false);
@@ -11,24 +12,24 @@ function Filter() {
     <div className="stickyInner">
       <div className="filterBar">
         <nav className="filterContainer">
-          <a href="/thoughts" className="filterItem on">
+          <NavLink to="/home" className="filterItem on">
             All
-          </a>
-          <a href="/music" className="filterItem">
+          </NavLink>
+          <NavLink to="/music" className="filterItem">
             Music
-          </a>
-          <a href="/design" className="filterItem">
+          </NavLink>
+          <NavLink to="/design" className="filterItem">
             Design
-          </a>
-          <a href="/dj" className="filterItem">
+          </NavLink>
+          <NavLink to="/dj" className="filterItem">
             DJ
-          </a>
-          <a href="/video" className="filterItem">
+          </NavLink>
+          <NavLink to="/video" className="filterItem">
             Video
-          </a>
-          <a href="/photo" className="filterItem">
+          </NavLink>
+          <NavLink to="/photo" className="filterItem">
             Photo
-          </a>
+          </NavLink>
         </nav>
       </div>
     </div>

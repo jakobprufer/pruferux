@@ -29,7 +29,7 @@
 /* home */
 .slideContainer {
     position: relative;
-    height: 600px;
+    height: 75vh;
     z-index: 10;
     overflow: hidden;
   }
@@ -41,12 +41,23 @@
     z-index: 10;
   }
 
-  .slideLogo {
+  /* .slideLogo {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+    filter: invert(1);
+  } */
+
+  .slideLogo {
+    position: fixed;
+    margin: 30vh auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
     filter: invert(1);
   }
 
@@ -61,6 +72,7 @@
     background-color: rgba(255, 255, 255, 0) ;
     color: rgb(255, 255, 255) ;
     z-index: 20;
+    line-height: normal;
 }
 
 .headerBarAttached {
@@ -72,17 +84,17 @@
     font-weight: 400;
     transition: 0s;
     background-color: rgb(255, 255, 255) ;
-    height: 63px;
+    height: 55Spx;
 }
 
 .logoBar {
     position: relative;
-    padding: 1rem 2rem 0rem 2rem;
+    padding: 25px 20px 0px 25px;
     z-index: 20;
 }
 
 .logoContainer {
-    padding: 1rem 0rem;
+    padding: 0rem 0rem 1rem 0rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -158,6 +170,8 @@
     white-space: nowrap;
     width: 4.3rem;
     transition: 0.2s;
+    line-height: normal;
+    cursor: pointer;
 }
 
 .sortButtonOut {
@@ -169,6 +183,7 @@
     white-space: nowrap;
     width: 0rem;
     transition: 0.2s;
+    line-height: normal;
 }
 
 .turned {
@@ -230,7 +245,7 @@
 
   .sticky .stickyInner {
     position: fixed;
-    top: 63px;
+    top: 53px;
     left: 0;
     right: 0;
     transition: 0.1s;
@@ -238,7 +253,7 @@
 
   .stickyDown .stickyInner {
     position: fixed;
-    top: 12.8rem;
+    top: 195px;
     left: 0;
     right: 0;
     background-color: white;
@@ -246,7 +261,7 @@
   }
 
 .filterBar {
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0rem 25px 0rem 25px;
     /* position: relative; */
     height: 53px;
 }
@@ -262,13 +277,16 @@
 
 /* posts page */
 .content {
-    padding: 1rem 2rem;
+    padding: 1rem 25px;
 }
 
 .post {
     margin: 0rem 0rem 1rem 0rem;
     display: block;
   }
+.post:hover {
+  opacity: 95%;
+}
   
   .postHeader {
     margin-bottom: 0.75rem;
@@ -285,70 +303,109 @@
     display: none;
   }
   
-  .postCluster {
-    display: flex;
+  /* .imgGrid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  } */
+
+  .imgGrid1 img {
+    width: 100%;
+  }
+
+  .imgGrid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .imgGrid2 img {
+    width: 100%;
+  }
+
+  .imgGrid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+
+  .imgGrid3 img {
+    width: 100%;
+  }
+
+  .imgGridProject img {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+
+  /* .postGrid1 {
+    display: grid;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   
-  .img1 {
+  .imgGrid1 {
     width: 100%;
     margin-bottom: 1rem;
     aspect-ratio: 3/2;
     object-fit: cover;
   }
   
-  .img22 {
+  .imgGrid2 {
     max-width: 49%;
     margin-bottom: 0.4rem;
     aspect-ratio: 3/2;
     object-fit: cover;
   }
 
+  .imgGrid3 {
+    max-width: 30%;
+  } */
+
     /* special post */
-    .specialDateContainer {
-        height: 0px;
-        min-width: 100%;
-        display: flex;
-        justify-content: end;
-      }
-      
-      .specialDate {
-        margin-left: auto;
-        margin-top: 0.5rem;
-      }
-      
-      .offLogo1 {
-        font-family: 'Fira Sans', sans-serif;
-        font-weight: 800;
-        font-size: 8rem;
-        mix-blend-mode: difference;
-        filter: invert(1);
-        z-index: 1;
-        /* background-image: url('./samplefiles/off1.jpg'); */
-      }
-      
-      .offLogo2 {
-        font-family: 'Fira Sans', sans-serif;
-        font-weight: 800;
-        font-size: 8rem;
-        color: white;
-        /* mix-blend-mode: difference;
-        filter: invert(1);
-        z-index: 1; */
-        position: relative;
-        left: -10.5rem;
-        z-index: -2;
-      }
-      
-      .off1 {
-        width: 12rem;
-        position: relative;
-        top: -4rem;
-        left: 2rem;
-        z-index: -1;
-      }
+  .specialDateContainer {
+      height: 0px;
+      min-width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+    
+  .specialDate {
+      margin-left: auto;
+      margin-top: 0.5rem;
+    }
+    
+  .offLogo1 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 8rem;
+      mix-blend-mode: difference;
+      filter: invert(1);
+      z-index: 1;
+      /* background-image: url('./samplefiles/off1.jpg'); */
+    }
+    
+  .offLogo2 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 8rem;
+      color: white;
+      /* mix-blend-mode: difference;
+      filter: invert(1);
+      z-index: 1; */
+      position: relative;
+      left: -10.5rem;
+      z-index: -2;
+    }
+    
+  .off1 {
+      width: 12rem;
+      position: relative;
+      top: -4rem;
+      left: 2rem;
+      z-index: -1;
+    }  
   
   /* footer */
   .footer {
@@ -410,6 +467,11 @@
   }
   
   /* project page */
+  .project {
+    padding: 40px 25px 1rem 25px;
+}
+/* only temp because content misses a top margin to balance out missing homeSlide */
+
   .projectTitle {
     display: flex;
     margin-bottom: 1rem;
