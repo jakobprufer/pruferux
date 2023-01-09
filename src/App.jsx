@@ -14,6 +14,7 @@ import Senses from "./modules/ux/Senses";
 import UXHome from "./modules/ux/UXHome";
 import Hair from "./modules/ux/Hair";
 import Birdsong from "./modules/ux/Birdsong";
+import Disguise from "./modules/ux/Disguise";
 // temp
 import NYC from "./modules/pages/NYC";
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/ux/home" element={<UXHome />} />
           <Route path="/ux/hair" element={<Hair />} />
           <Route path="/ux/birdsong" element={<Birdsong />} />
+          <Route path="/ux/disguise" element={<Disguise />} />
         </Routes>
       </Router>
     </div>

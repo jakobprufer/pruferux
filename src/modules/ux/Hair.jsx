@@ -184,7 +184,6 @@ function Hair() {
                     enlargedSrc="/images/ux/hair1_1_1.png"
                   />
                 </div>
-
                 <div className="g11asym">
                   <div className="g11asymImg1">
                     <ZoomImage

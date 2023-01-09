@@ -32,6 +32,8 @@ function UXHome() {
   const disguisePost1 = useRef();
   const birdsongPost = useRef();
   const birdsongPost1 = useRef();
+  const sensesPost = useRef();
+  const hairPost = useRef();
 
   return (
     <div>
@@ -171,7 +173,7 @@ function UXHome() {
               <div className="uxPostTitle">UX of Birdsong</div>
               <div className="uxPostBeauty">
                 <HoverVideoPlayer
-                  videoSrc="/images/ux/birdsong_b.mp4"
+                  videoSrc="/images/ux/birdsong_b2.mp4"
                   hoverTarget={birdsongPost1}
                   pausedOverlay={
                     <img
@@ -188,12 +190,12 @@ function UXHome() {
                 />
               </div>
             </a>
-            <div className="uxPost" ref={disguisePost1}>
+            <a className="uxPost" ref={disguisePost1} href="/ux/disguise">
               <div className="uxSmallTitle">Unit 1</div>
               <div className="uxPostTitle">UX of Disguise</div>
               <div className="uxPostBeauty">
                 <HoverVideoPlayer
-                  videoSrc="/images/ux/disguise2btemp.mp4"
+                  videoSrc="/images/ux/disguise_bslow.mp4"
                   hoverTarget={disguisePost1}
                   pausedOverlay={
                     <img
@@ -209,17 +211,32 @@ function UXHome() {
                   }
                 />
               </div>
-            </div>
+            </a>
           </div>
           <div className="uxStickyTitle">
             <h2>Unit 1: UX Studio Practices</h2>
           </div>
           <div className="uxHomeGrid">
-            <a href="/ux/senses" className="uxPost">
+            <a href="/ux/senses" className="uxPost" ref={sensesPost}>
               <div className="uxSmallTitle">Brief 1</div>
               <div className="uxPostTitle">UX of Human Senses</div>
               <div className="uxPostBeauty">
-                <img src="/images/ux/senses_bs.JPG" alt="" />
+                <HoverVideoPlayer
+                  videoSrc="/images/ux/senses_b.mp4"
+                  hoverTarget={sensesPost}
+                  pausedOverlay={
+                    <img
+                      src="/images/ux/senses_bs.JPG"
+                      alt=""
+                      style={{
+                        // Make the image expand to cover the video's dimensions
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  }
+                />
               </div>
             </a>
             <a className="uxPost" ref={mouldPost} href="/ux/mould">
@@ -244,11 +261,26 @@ function UXHome() {
                 />
               </div>
             </a>
-            <a className="uxPost" href="/ux/hair">
+            <a className="uxPost" href="/ux/hair" ref={hairPost}>
               <div className="uxSmallTitle">Brief 3</div>
               <div className="uxPostTitle">UX of Hair</div>
               <div className="uxPostBeauty">
-                <img src="/images/ux/hair_btemp.jpg" alt="" />
+                <HoverVideoPlayer
+                  videoSrc="/images/ux/hair_b.mp4"
+                  hoverTarget={hairPost}
+                  pausedOverlay={
+                    <img
+                      src="/images/ux/hair_btemp.jpg"
+                      alt=""
+                      style={{
+                        // Make the image expand to cover the video's dimensions
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  }
+                />
               </div>
             </a>
             <a className="uxPost" ref={birdsongPost} href="/ux/birdsong">
@@ -256,7 +288,7 @@ function UXHome() {
               <div className="uxPostTitle">UX of Birdsong</div>
               <div className="uxPostBeauty">
                 <HoverVideoPlayer
-                  videoSrc="/images/ux/birdsong_b.mp4"
+                  videoSrc="/images/ux/birdsong_b2.mp4"
                   hoverTarget={birdsongPost}
                   pausedOverlay={
                     <img
@@ -273,12 +305,12 @@ function UXHome() {
                 />
               </div>
             </a>
-            <div className="uxPost" ref={disguisePost}>
+            <a className="uxPost" ref={disguisePost} href="/ux/disguise">
               <div className="uxSmallTitle">Brief 5</div>
               <div className="uxPostTitle">UX of Disguise</div>
               <div className="uxPostBeauty">
                 <HoverVideoPlayer
-                  videoSrc="/images/ux/disguise2btemp.mp4"
+                  videoSrc="/images/ux/disguise_bslow.mp4"
                   hoverTarget={disguisePost}
                   pausedOverlay={
                     <img
@@ -294,7 +326,7 @@ function UXHome() {
                   }
                 />
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

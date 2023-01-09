@@ -51,7 +51,7 @@ function NYC() {
 
   return (
     <div>
-      <Header attach showSort={false} toggleSort={toggleSort} />
+      <Header attach showSort={showSort} toggleSort={toggleSort} />
       <div
         className={classNames(
           "stickyWrapper",

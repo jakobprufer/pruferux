@@ -443,6 +443,16 @@ function Birdsong() {
                   enlargedSrc="/images/ux/birdsong2_3_1.jpg"
                 />
               </div>
+              <h3>Main Takeaways:</h3>
+              <ul>
+                <li>
+                  Arduino boards are relatively easy to set up and can be used
+                  with various types of sensors to create interactive
+                  installations. Various outputs can be triggered and the
+                  integration in Ableton Live for sound is amazing thanks to a
+                  dedicated Max for Live device.
+                </li>
+              </ul>
               <h3>References</h3>
               <div className="bib" ref={bib}>
                 <ol>

@@ -13,6 +13,7 @@
     "react-gesture-responder": "^2.1.0",
     "react-hover-video-player": "^9.7.1",
     "react-image-enlarger": "^1.1.0",
+    "react-pdf": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "sass": "^1.55.0",
