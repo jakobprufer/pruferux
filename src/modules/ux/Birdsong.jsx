@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./UX.sass";
 import classNames from "classnames";
 import Image from "react-image-enlarger";
+import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 
 function ZoomImage({ src, enlargedSrc }) {
   const [zoomed, setZoomed] = React.useState(false);
@@ -161,6 +162,7 @@ function Birdsong() {
                 distraction, 2. a cardboard box to impair vision and 3. a
                 cardboard box with headphones and music playing.
               </p> */}
+
               <h3>Week 1</h3>
               <p>
                 We very much understand the world visually, especially when it
@@ -453,6 +455,14 @@ function Birdsong() {
                   dedicated Max for Live device.
                 </li>
               </ul>
+              <div className="bottomNav">
+                <a href="/ux/hair">
+                  <HiOutlineArrowLeft className="hiIcon" /> Previous brief
+                </a>
+                <a href="/ux/disguise">
+                  Next brief <HiOutlineArrowRight className="hiIcon" />
+                </a>
+              </div>
               <h3>References</h3>
               <div className="bib" ref={bib}>
                 <ol>

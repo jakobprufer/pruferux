@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./UX.sass";
 import classNames from "classnames";
 import Image from "react-image-enlarger";
+import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 
 function ZoomImage({ src, enlargedSrc }) {
   const [zoomed, setZoomed] = React.useState(false);
@@ -451,6 +452,14 @@ function Senses() {
                   <li>Pizza at the canteen is solid</li>
                 </ul>
               </p>
+              <div className="bottomNav">
+                <a href="/ux/home">
+                  <HiOutlineArrowLeft className="hiIcon" /> Back to overview
+                </a>
+                <a href="/ux/mould">
+                  Next brief <HiOutlineArrowRight className="hiIcon" />
+                </a>
+              </div>
               <h3>References:</h3>
               <div className="bib" ref={bib}>
                 <ol>

@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from "react";
 import "./UX.sass";
 import classNames from "classnames";
 import Image from "react-image-enlarger";
+import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 
 function ZoomImage({ src, enlargedSrc }) {
   const [zoomed, setZoomed] = React.useState(false);
@@ -501,6 +502,14 @@ function Disguise() {
                 </li>
                 <li>Regular snacks skyrocket the team morale.</li>
               </ul>
+              <div className="bottomNav">
+                <a href="/ux/birdsong">
+                  <HiOutlineArrowLeft className="hiIcon" /> Previous brief
+                </a>
+                <a href="/ux/home">
+                  Back to overview <HiOutlineArrowRight className="hiIcon" />
+                </a>
+              </div>
               <h3>References:</h3>
               <div className="bib" ref={bib}>
                 <ol>

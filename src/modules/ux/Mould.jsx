@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./UX.sass";
 import classNames from "classnames";
 import Image from "react-image-enlarger";
+import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 
 function ZoomImage({ src, enlargedSrc }) {
   const [zoomed, setZoomed] = React.useState(false);
@@ -524,6 +525,14 @@ function Mould() {
                     </li>
                   </ul>
                 </p>
+                <div className="bottomNav">
+                  <a href="/ux/senses">
+                    <HiOutlineArrowLeft className="hiIcon" /> Previous brief
+                  </a>
+                  <a href="/ux/hair">
+                    Next brief <HiOutlineArrowRight className="hiIcon" />
+                  </a>
+                </div>
                 <h3>References:</h3>
                 <div className="bib" ref={bib}>
                   <ol>
