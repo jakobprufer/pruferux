@@ -1,85 +1,187 @@
-// @media (pointer:none), (pointer:coarse)
-@media (max-width: 599px)
-  .uxContent
+// setting theme classes
+.light1 .textColour
+  color: #000
+
+.dark .textColour
+  color: #fff
+
+.light1 .backgroundColour
+  background-color: #fff
+
+.dark .backgroundColour
+  background-color: #232323
+
+.light1 .highlightColour
+  background-color: #ffced4
+
+.dark .highlightColour
+  background-color: #355E3B
+
+.light1 .iconColour
+  filter: invert(0)
+
+.dark .iconColour
+  filter: invert(1)
+
+// begin sass
+.uxPage
+  // @extend .textColour
+  // @extend .backgroundColour
+
+img
+  max-width: 100%
+  height: auto
+
+// a
+//   white-space: pre-wrap
+//   white-space: -moz-pre-wrap
+//   white-space: -pre-wrap
+//   white-space: -o-pre-wrap
+//   word-wrap: break-word
+
+  // @media (pointer:none), (pointer:coarse)
+@media (max-width: 650px)
+  .uxBody
     width: 100vw
     margin: 0 auto
-    padding: 10px 10px
+    padding: 0px 20px
+    box-sizing: border-box
+    flex-direction: column
   .uxSidebar
-    display: none
+    display: block
+    padding: 0
+  .uxSidebarText
+    margin-top: 80px
+    position: static
+  #uxlogoTitle
+    position: fixed
+    right: 0
+    left: 0
+    padding-top: 32px
+    padding-left: 20px
+    padding-bottom: 47px
+    box-sizing: border-box
   .uxHomeGrid
     grid-template-columns: 1fr
     gap: 3vh 40px
+  .uxNav
+    height: 0px
 
-@media (min-width: 600px)
-  .uxContent
+@media (min-width: 650px)
+  .uxBody
     width: min(1500px, calc( 70vw + 180px ))
+    max-with: 1500px
     margin: 0 auto
-    padding: 20px 10px
+    padding: 0px 10px
     box-sizing: border-box
+    flex-direction: row
   .uxSidebar
     display: block
     width: 300px
+    padding: 0 calc( 5vw - 5px ) 0 0
+  .uxSidebarText
+    margin-top: 0
+    position: sticky
   .uxHomeGrid
     grid-template-columns: 1fr
     gap: 3vh 40px
 
 @media (min-width: 768px)
-  .uxContent
+  .uxBody
     width: min(1500px, calc( 70vw + 180px ))
+    flex-basis: 1
     margin: 0 auto
-    padding: 20px 10px
+    padding: 0px 10px
     box-sizing: border-box
+    flex-direction: row
   .uxSidebar
     display: block
-    width: 384px
+    width: max(300px, 25vw)
+    padding: 0 calc( 5vw - 5px ) 0 0
+  .uxSidebarText
+    margin-top: 0
+    position: sticky
   .uxHomeGrid
     grid-template-columns: 1fr 1fr
-    gap: 3vh 20px
+    gap: 3vh 1.5vw
 
-.uxContent::selection
+.uxBody::selection
   background-color: rgb(255, 206, 212)
 
-.uxContent h1
-  font-weight: 400
-  font-size: 1.5rem
-  line-height: 1.7rem
-  z-index: 10
-
-.uxContent h2
+.uxBody h1
   font-weight: 400
   font-size: 1.5rem
   line-height: 1.7rem
 
-.uxContent
+.uxBody h2
+  font-weight: 400
+  font-size: 1.5rem
+  line-height: 1.7rem
+
+.uxBody
   display: flex
-  flex-direction: row
   flex-wrap: nowrap
+  max-width: 100%
 
 .uxSidebar
-  padding: 0 5vw 0 0
   box-sizing: border-box
-  position: sticky
-  top: 20px
-  align-self: flex-start
-  z-index: 1000
   user-select: none
   // display: inline-block
   // width: calc(30vw)
 
-  a
-    text-decoration: underline
+p a
+  text-decoration: underline
 
-.uxHomeTitle
+.uxStickyTitleFirst
   padding: 0 0 20px 0
-  height: 3.3rem
+  height: 60px
+  display: flex
+  align-items: flex-end
+  flex-wrap: wrap
+  background: white
+  // @extend .backgroundColour
+  position: sticky
+  top: 0px
+  align-self: flex-start
+  z-index: 5
+
+.uxStickyTitle
+  padding: 0 0 30px 0
+  margin-top: 10px
+  height: 40px
+  display: flex
+  align-items: flex-end
+  flex-wrap: wrap
+  background: white
+  // @extend .backgroundColour
+  position: sticky
+  top: 20px
+  align-self: flex-start
+  z-index: 5
+
+.uxLogo
+  display: inline-block
+
+.uxName
+  display: inline-block
+
+.uxSidebarText
+  top: 80px
+  align-self: flex-start
+  padding-top: 8px
 
 .uxSidebar p
   font-size: 1rem
-  line-height: 1.2rem
+  line-height: 1.3rem
   margin: 0 0 20px 0
 
 .uxArrow
-  height: 0.8rem
+  height: 0.7rem
+  padding: 1px 2px 1px 1px
+  margin-right: 2px
+  // @extend .iconColour
+  // stroke: black
+  // stroke-width: 1px
 
 .turned90
   display: inline-block
@@ -103,29 +205,52 @@
   height: 0px
   overflow: hidden
 
-.uxBody
-  flex: 3 380px
-  width: calc(40vh + 180px)
+.uxBackArrow
+  height: 0.8rem
+  padding-right: 3px
+  // @extend .iconColour
+
+.uxNav
+  font-size: 1rem
+
+.uxNav .active
+  font-weight: 600
+
+.uxNavSection
+  margin-bottom: 20px
+
+.uxNavProject
+  display: block
+  margin: 20px 0 0 22px
+  width: fit-content
+
+.uxContent
+  flex: 1
+  background-color: white
+  // @extend .backgroundColour
+  margin-top: 10px
+  padding: 0 0 50px 0
+  // width: calc(40vh + 180px)
   // display: inline-block
   // vertical-align: top
 
-.uxBodyBar
-  width: 100%
-  height: 3.3rem
-  margin: 0 0 20px 0
-  position: sticky
-  top: 20px
-  z-index: 10
+// .uxBodyBar
+//   width: 100%
+//   height: 3.3rem
+//   margin: 0 0 20px 0
+//   position: sticky
+//   top: 20px
+//   z-index: 1100
 
-.uxBodyTitle
-  position: absolute
-  bottom: 0
-  width: 100%
-  background: white
+// .uxBodyTitle
+//   position: absolute
+//   bottom: 0
+//   width: 100%
+//   background: red
 
 .uxHomeGrid
   font-size: 1rem
-  margin: 20px 0
+  margin: 0
   display: grid
 
 // .uxHomeGrid
@@ -139,10 +264,11 @@
 .uxPost:hover .uxPostBeauty
   opacity: 95%
 
-.uxPostNumber
+.uxSmallTitle
   // text-transform: uppercase
   font-weight: 500
-  font-size: 0.7rem
+  font-size: 0.8rem
+  line-height: 0.7rem
   margin-bottom: 3px
 
 .uxPostTitle
@@ -182,49 +308,50 @@
 .uxSolid
   position: fixed
   top: 0
-  z-index: 5
-  height: 90px
+  z-index: 4
+  height: 30px
   width: 100%
   background-color: white
+  // @extend .backgroundColour
 
-.uxGradient
-  background: rgb(255,255,255)
-  background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
-  background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1)
-  position: fixed
-  top: 0
-  z-index: 100
-  height: 70px
-  width: 100%
+// .uxGradient
+//   background: rgb(255,255,255)
+//   background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+//   background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+//   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1)
+//   position: fixed
+//   top: 0
+//   z-index: 100
+//   height: 70px
+//   width: 100%
 
-.uxHeadlineBg1
-  font-weight: 800
-  color: rgba(255, 206, 212, 0.523)
-  position: fixed
-  font-size: 10rem
-  line-height: 5rem
-  z-index: -10
-  bottom: -10px
+// .uxHeadlineBg1
+//   font-weight: 800
+//   color: rgba(255, 206, 212, 0.523)
+//   position: fixed
+//   font-size: 10rem
+//   line-height: 5rem
+//   z-index: -10
+//   bottom: -10px
 
-.uxHeadlineBg2
-  font-weight: 800
-  color: rgba(190, 28, 47, 0.112)
-  position: fixed
-  font-size: 10rem
-  line-height: 5rem
-  z-index: -10
-  bottom: 0
-  margin-left: 10px
+// .uxHeadlineBg2
+//   font-weight: 800
+//   color: rgba(190, 28, 47, 0.112)
+//   position: fixed
+//   font-size: 10rem
+//   line-height: 5rem
+//   z-index: -10
+//   bottom: 0
+//   margin-left: 10px
 
-.uxHeadline
-  font-size: 1.5rem
-  padding: 20px 10px 20px 10px
-  font-weight: 400
-  position: sticky
-  top: 0
-  z-index: 101
+// .uxHeadline
+//   font-size: 1.5rem
+//   padding: 20px 10px 20px 10px
+//   font-weight: 400
+//   position: sticky
+//   top: 0
+//   z-index: 101
 
 .uxH3
   margin-bottom: 10px
@@ -233,39 +360,49 @@
   font-weight: 400
 
 .uxBeauty
-  max-width: 100%
+  width: 100%
 
 .uxBeautyVideo
-  max-width: 100%
-  max-height: calc(100vw/1.77777777778)
+  width: 100%
+  // max-height: calc(100vw/1.77777777778)
+  height: auto
 
-@media screen and (min-width: 768px)
-  .uxBeautyVideo
-    max-width: 768px
-    max-height: 432px
+.uxVideo
+  width: 100%
+  height: auto
+
+// @media screen and (min-width: 768px)
+//   .uxBeautyVideo
+//     max-width: 768px
+//     max-height: 432px
 
 .uxText
-  margin: 20px 10px
-  font-size: 1.1rem
-  line-height: 1.8rem
+  margin: 20px 0px
+  font-size: 1rem
+  line-height: 1.6rem
   // line-height: normal
   max-width: 100%
 
   p
-    margin: 10px 0px 20px 0px
+    margin: 0px 0px 20px 0px
 
   a
     text-decoration: underline
 
   h3
-    font-size: 0.9rem
-    line-height: 1.5rem
+    font-weight: 400
+    font-size: 1.5rem
+    line-height: 1.7rem
+    padding-top: 20px
 
 ul
   list-style-type: circle
   margin-left: 20px
   margin-top: 10px
   margin-bottom: 10px
+
+ol
+  margin: 10px 0
 
 li
   margin-bottom: 10px
@@ -274,13 +411,15 @@ li
   margin-bottom: 30px
 
 .uxHighlight
-  background-color: rgb(255, 206, 212)
+  // @extend .highlightColour
+  background-color: #ffced4
+  // background-color: rgb(255, 250, 105)
 
 .uxAbstract
   font-size: 1.1rem
 
 .uxMain
-  margin-top: 50px
+  margin-top: 30px
 
 .uxMain p
   margin: 25px 0px
@@ -397,20 +536,68 @@ li
 
 // GRID SOLUTION
 
+.caption
+  margin: 10px 0 20px 0
+  // font-style: italic
+  font-size: 0.8rem
+  font-weight: 500
+  line-height: 1.2rem
+
+.video169responsive
+  overflow: hidden
+  padding-bottom: 56.25%
+  position: relative
+  height: 0
+  margin: 5px 0
+
+iframe
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  position: absolute
+
 .g1
   width: 100%
+  margin: 5px 0
+
+.g1add
+  width: 100%
+  margin: 5px 0
 
 .g11
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 5px
+  margin: 5px 0
+
+.g111
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  gap: 5px
+  margin: 5px 0
+
+//   //could be replaced by a global image class:
+// .g11img
+//   max-width: 50%
+//   height: auto
+
+.g11asym
   width: 100%
   display: flex
   overflow: hidden
   flex-direction: row
+  margin: 5px 0
 
-.g11img1
+.g11asymImg1
   display: block
   flex: 5 1 0px
 
-.g11img2
+.g11asymImg1b
+  display: block
+  flex: 6.32 1 0px
+
+.g11asymImg2
   margin-left: 5px
   display: block
   flex: 2 1 0px
@@ -425,6 +612,7 @@ li
   gap: 5px
   grid-template-columns: minmax(0, 6fr) minmax(0, 4fr)
   ggrid-template-rows: repeat(3, minmax(0, 1fr))
+  margin: 5px 0
 
 .gr12img1
   // background-color: yellow
@@ -458,10 +646,13 @@ li
 //   min-width: 100%
 //   width: 100%
 
-a.footNote
-  vertical-align: super
-  font-size: 0.8rem
+.footNote
+  vertical-align: top
+  position: relative
+  top: -0.5em
+  font-size: 0.7em
   text-decoration: none
+  cursor: pointer
 
 .bib
   margin-top: 25px
@@ -476,3 +667,6 @@ a.footNote
 ol
   margin-left: 30px
   list-style-type: decimal
+
+audio
+  width: 100%

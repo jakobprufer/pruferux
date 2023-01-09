@@ -140,7 +140,7 @@ body {
 }
 
 a {
-  color: black;
+  color: inherit;
   text-decoration: none;
 } */
 /* maybe other solution for this */
