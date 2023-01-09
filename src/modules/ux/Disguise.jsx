@@ -218,17 +218,18 @@ function Disguise() {
                 camouflage or inversely with identification: military uniforms,
                 balaclavas, ID cards and pens for handwriting.{" "}
               </p>
-              <div className="g1">
+              {/* <div className="g1">
+               
+              </div> */}
+              <div className="g1d1">
                 <ZoomImage
                   src="/images/ux/disguise1_1_1m.jpg"
                   enlargedSrc="/images/ux/disguise1_1_1.jpg"
                 />
-              </div>
-              <div className="g11">
-                <ZoomImage
+                {/* <ZoomImage
                   src="/images/ux/disguise1_1_2m.jpg"
                   enlargedSrc="/images/ux/disguise1_1_2.jpg"
-                />
+                /> */}
                 <ZoomImage
                   src="/images/ux/disguise1_1_3m.jpg"
                   enlargedSrc="/images/ux/disguise1_1_3.jpg"
@@ -450,16 +451,16 @@ function Disguise() {
                 </div>
               </div>
               <p>
-                We also took pictures in a London bus and tested the
-                sound-proofing effect in this real-world scenario. To our
-                satisfaction the mask reliably muffled the voice while the
-                microphone inside picked up clearly on the words. For
-                presentation in front of the class, we sent one caller to
-                another room, had one participant wear the mask while answering
-                the call and let another participant try to pick out a secret
-                word from the phone conversation. In the background we played a
-                restaurant noise from speakers. The mask sufficiently dampened
-                the voice to disguise the secret word from the guessing student.
+                We also tested the sound-proofing effect in the real-world
+                environment of a London bus. To our satisfaction the mask
+                reliably muffled the voice while the microphone inside picked up
+                clearly on the words. For presentation in front of the class, we
+                sent one caller to another room, had one participant wear the
+                mask while answering the call and let another participant try to
+                pick out a secret word from the phone conversation. In the
+                background we played a restaurant noise from speakers. The mask
+                sufficiently dampened the voice to disguise the secret word from
+                the guessing student.
               </p>
               <div className="g111">
                 <video controls className="uxVideo" width="480" height="848">
