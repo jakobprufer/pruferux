@@ -40,7 +40,7 @@ function Disguise() {
         <div className="uxHeadlineBg2">Senses</div> */}
       <div className="uxBody">
         <div className="uxSidebar">
-          <a href="/ux/home">
+          <a href="/ux">
             <h1 className="uxStickyTitleFirst" id="uxlogoTitle">
               <div className="uxLogo">
                 <b>MA:UX</b>&nbsp;
@@ -51,7 +51,7 @@ function Disguise() {
           <div className="uxSidebarText">
             <nav className="uxNav">
               <div className="uxNavSection">
-                <a href="/ux/home">
+                <a href="/ux">
                   <svg
                     className="uxBackArrow"
                     xmlns="http://www.w3.org/2000/svg"
@@ -506,7 +506,7 @@ function Disguise() {
                 <a href="/ux/birdsong">
                   <HiOutlineArrowLeft className="hiIcon" /> Previous brief
                 </a>
-                <a href="/ux/home">
+                <a href="/ux">
                   Back to overview <HiOutlineArrowRight className="hiIcon" />
                 </a>
               </div>

@@ -1,9 +1,9 @@
-FROM node:14 AS nodebuild
+FROM node:19 AS nodebuild
 
 # Build the frontend
 ARG version=0.0.1
-WORKDIR /frontend
-COPY . /frontend
+WORKDIR /web
+COPY . /web
 
 RUN npm version --no-git-tag-version ${version} \
   && yarn install \
@@ -12,5 +12,5 @@ RUN npm version --no-git-tag-version ${version} \
 FROM nginx:alpine
 # Serve the frontend
 EXPOSE 80
-COPY --from=nodebuild /frontend/build /serve
-COPY --from=nodebuild /frontend/nginx.conf /etc/nginx/nginx.conf
+COPY --from=nodebuild /web/build /serve
+COPY --from=nodebuild /web/nginx.conf /etc/nginx/nginx.conf

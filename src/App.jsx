@@ -21,22 +21,30 @@ import NYC from "./modules/pages/NYC";
 function App() {
   // window.location.href =
   //   "https://research.sc/participant/login/dynamic/19A4FC10-A5AF-4D47-9111-35ACE8F8F7DE";
+
+  // <Route path="/home" element={<Home />} />
+  // <Route path="/music" element={<Music />} />
+  // <Route path="/design" element={<Design />} />
+  // <Route path="/dj" element={<Dj />} />
+  // <Route path="/video" element={<Video />} />
+  // <Route path="/photo" element={<Photo />} />
+  // <Route path="/projects" element={<Projects />} />
+  // <Route path="/aboutme" element={<AboutMe />} />
+  // <Route path="/nyc" element={<NYC />} />
+
+  // idea to make subdomains work ...
+  // if (window.location.hostname === "prufer.co") {
+  // } else if (window.location.hostname === "ux.prufer.co") {
+  // } else {
+  // }
+  
   return (
     <div>
       <Router>
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/design" element={<Design />} />
-          <Route path="/dj" element={<Dj />} />
-          <Route path="/video" element={<Video />} />
-          <Route path="/photo" element={<Photo />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/nyc" element={<NYC />} />
+          <Route path="/ux" element={<UXHome />} />
           <Route path="/ux/mould" element={<Mould />} />
           <Route path="/ux/senses" element={<Senses />} />
-          <Route path="/ux/home" element={<UXHome />} />
           <Route path="/ux/hair" element={<Hair />} />
           <Route path="/ux/birdsong" element={<Birdsong />} />
           <Route path="/ux/disguise" element={<Disguise />} />

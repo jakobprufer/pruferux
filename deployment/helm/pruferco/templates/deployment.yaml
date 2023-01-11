@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: {{ include "pruferco.fullname" . }}
   labels:
+    date: "{{ now | unixEpoch }}"
     {{- include "pruferco.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}

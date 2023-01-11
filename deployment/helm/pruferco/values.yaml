@@ -8,10 +8,10 @@ global:
 replicaCount: 1
 
 image:
-  repository: core.registry.romnn.com/pruferco/frontend
+  repository: cr.romnn.com/pruferco/frontend
   pullPolicy: IfNotPresent
-  imagePullSecrets:
-    - name: pruferco-container-pull-secret
+  # imagePullSecrets:
+  #   - name: pruferco-container-pull-secret
 
 imagePullSecrets: []
 nameOverride: ""
@@ -47,33 +47,84 @@ service:
 
 
 ingress:
-  enabled: true
-  match:
-    - uri:
-        prefix: /
-  gateways:
-    - port:
-        name: http-redirect
-        number: 80
-        protocol: HTTP
-      hosts:
-        - prufer.co
-      tls:
-        httpsRedirect: true
-    - port:
-        name: https
-        number: 443
-        protocol: HTTPS
-      hosts:
-        - prufer.co
-      tls:
-        mode: SIMPLE
-        credentialName: prufer.co
+  # - name: non-ux
+  #   enabled: true
+  #   annotations:
+  #     kubernetes.io/ingress.class: nginx
+  #     kubernetes.io/tls-acme: "true"
+  #     cert-manager.io/cluster-issuer: letsencrypt-staging
+  #     nginx.ingress.kubernetes.io/upstream-vhost: prufer.co
+  #   hosts:
+  #     - host: ux.prufer.co
+  #       paths:
+  #         - path: /(.*)
+  #           pathType: ImplementationSpecific
+  #         - path: /(home|mould|senses|home|hair|birdsong|disguise)
+  #           pathType: Prefix
+  #   tls:
+  #     - secretName: prufer.co
+  #       hosts:
+  #         - ux.prufer.co
 
-      issuerRef:
-        name: letsencrypt-prod
-        kind: ClusterIssuer
-        group: cert-manager.io
+  # - name: ux
+  #   enabled: true
+  #   annotations:
+  #     kubernetes.io/ingress.class: nginx
+  #     kubernetes.io/tls-acme: "true"
+  #     cert-manager.io/cluster-issuer: letsencrypt-staging
+  #     nginx.ingress.kubernetes.io/rewrite-target: /ux/$1
+  #     # nginx.ingress.kubernetes.io/upstream-vhost: prufer.co
+  #   hosts:
+  #     - host: ux.prufer.co
+  #       paths:
+  #         # - path: /(.*)
+  #         #   pathType: Prefix
+  #         # - path: /
+  #         - path: /(home|mould|senses|hair|birdsong|disguise)
+  #           # pathType: ImplementationSpecific
+  #           pathType: Prefix
+  #   tls:
+  #     - secretName: prufer.co
+  #       hosts:
+  #         - ux.prufer.co
+
+  - name: root
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      # - host: ux.prufer.co
+      #   paths:
+      #     # - path: /(home|mould|senses|home|hair|birdsong|disguise)
+      #     - path: /(.*)
+      #       pathType: Prefix
+      #     # - path: /
+      #     #   pathType: Prefix
+
+      - host: prufer.co
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+      # - host: ux.prufer.co
+      #   paths:
+      #     - path: /
+      #       pathType: ImplementationSpecific
+
+      # - host: ux.prufer.co
+      #   paths:
+      #     - path: /static
+      #       # pathType: ImplementationSpecific
+      #       pathType: Prefix
+      #     - path: /images
+      #       # pathType: ImplementationSpecific
+      #       pathType: Prefix
+      # - ux.prufer.co
+    tls:
+      - secretName: prufer.co
+        hosts:
+          - prufer.co
 
 resources:
   limits:
@@ -96,7 +147,7 @@ tolerations: []
 
 affinity: {}
 
-registry:
-  name: https://core.registry.romnn.com
-  user: changeme
-  password: changeme
+# registry:
+#   name: https://core.registry.romnn.com
+#   user: changeme
+#   password: changeme

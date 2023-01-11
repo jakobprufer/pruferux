@@ -40,7 +40,7 @@ function Senses() {
         <div className="uxHeadlineBg2">Senses</div> */}
       <div className="uxBody">
         <div className="uxSidebar">
-          <a href="/ux/home">
+          <a href="/ux">
             <h1 className="uxStickyTitleFirst" id="uxlogoTitle">
               <div className="uxLogo">
                 <b>MA:UX</b>&nbsp;
@@ -51,7 +51,7 @@ function Senses() {
           <div className="uxSidebarText">
             <nav className="uxNav">
               <div className="uxNavSection">
-                <a href="/ux/home">
+                <a href="/ux">
                   <svg
                     className="uxBackArrow"
                     xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ function Senses() {
           </div>
           <div className="g1">
             <ZoomImage
-              src="/images/ux/senses_bm.jpg"
+              src="/images/ux/senses_bm.JPG"
               enlargedSrc="/images/ux/senses_b.jpg"
             />
           </div>
@@ -309,7 +309,7 @@ function Senses() {
               <div className="g11asym">
                 <div className="g11asymImg1">
                   <ZoomImage
-                    src="/images/ux/senses1_3_1s.JPEG"
+                    src="/images/ux/senses1_3_1s.jpeg"
                     enlargedSrc="/images/ux/senses1_3_1.JPEG"
                   />
                 </div>
@@ -453,7 +453,7 @@ function Senses() {
                 </ul>
               </p>
               <div className="bottomNav">
-                <a href="/ux/home">
+                <a href="/ux">
                   <HiOutlineArrowLeft className="hiIcon" /> Back to overview
                 </a>
                 <a href="/ux/mould">

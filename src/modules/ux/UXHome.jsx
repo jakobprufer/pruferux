@@ -40,7 +40,7 @@ function UXHome() {
       <div className="uxSolid"></div>
       <div className="uxBody">
         <div className="uxSidebar">
-          <a href="/ux/home">
+          <a href="/ux">
             <div className="uxStickyTitleFirst" id="uxlogoTitle">
               <h1 className="uxLogo">
                 <b>MA:UX</b>&nbsp;
