@@ -156,9 +156,8 @@ function Hair() {
                 </p>
                 <div className="uxSmallTitle">Designers</div>
                 <p>
-                  <a href="">Keyi Cao</a>, <a href="">Mansi Chottani</a>,{" "}
-                  <a href="">Mohammed Bekkaoui</a> (Beck),{" "}
-                  <a href="">Yanxu Chen</a>, Jakob Prüfer
+                  <a href="https://medium.com/@KEYICAO" target="_blank">Keyi Cao</a>, <a href="https://readymag.com/u561240559/MansiMAUX/" target="_blank">Mansi Chottani</a>,{" "}
+                  <a href="https://stofmohbek.wixsite.com/mbekkaoui" target="_blank">Mohammed Bekkaoui</a> (Beck),{" "}Yanxu Chen, Jakob Prüfer
                 </p>
                 <div className="uxSmallTitle">Dates</div>
                 <p>27/10-10/11/2022</p>
@@ -273,12 +272,12 @@ function Hair() {
                   recognisability. Our final outcome was a short video clip
                   inspired by the Pokémon series and animated by Beck. It
                   challenged classmates to identify fellow students by the
-                  silhouette of their hair only. Feedback was mixed, while most
+                  silhouette of their hair only. Feedback was mixed. While most
                   found the concept amusing, advice was to escalate the idea
                   further. Maybe we could use projections to map hair styles to
                   someone’s face? Maybe we could find ways to make the game more
                   competitive and use other parts of the hair such as eyebrows?
-                  It was also noted that we only used boys because it was harder
+                  It was also noted that we only used boys; it had seemed harder
                   to differentiate the girls’ hairstyles by silhouette alone.
                   All in all the design remained pretty surface-level.
                 </p>
@@ -317,7 +316,7 @@ function Hair() {
                   substantially connect it with our research. The same was the
                   case with a new idea: Referencing the protecting function of
                   hair, I envisioned a sort of iron framework with fake hair
-                  that would surround the participant’s head. Hairdryers would
+                  that would surround the participant’s head. Hair dryers would
                   then be attached at the sides and the subject would “vanish”
                   in a sort of bubble of waving hair and static noise. I
                   imagined this experience as amazingly intimate, but abandoned

@@ -158,7 +158,7 @@ function UXHome() {
                 this masters programme knowing that I wanted to apply my
                 psychological insight in a creative way. Besides design and web
                 development, I'm passionate about music production, audio
-                engineering and DJing.
+                engineering and DJing. <a href="https://drive.google.com/file/d/1jA1qJpqB5ovfqqSkK-79JOTF5Dg2-jw-/view?usp=sharing" target="_blank">My CV</a>
               </div>
             </p>
           </div>
@@ -226,7 +226,7 @@ function UXHome() {
                   hoverTarget={sensesPost}
                   pausedOverlay={
                     <img
-                      src="/images/ux/senses_bs.JPG"
+                      src="/images/ux/senses_bs.jpg"
                       alt=""
                       style={{
                         // Make the image expand to cover the video's dimensions

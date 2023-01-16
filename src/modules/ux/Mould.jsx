@@ -167,11 +167,11 @@ function Mould() {
                 </p>
                 <div className="uxSmallTitle">Designers</div>
                 <p>
-                  <a href="">Kye Li Chia</a>,{" "}
+                  Kye Li Chia,{" "}
                   <a href="https://manfredimaux.com/" target="_blank">
                     Manfredi Montaretto Marullo
                   </a>
-                  , <a href="">Wan Ying Liang Chen</a>, Jakob Prüfer
+                  , Wan Ying Liang Chen, Jakob Prüfer
                 </p>
                 <div className="uxSmallTitle">Dates</div>
                 <p>13-27/10/2022</p>
@@ -192,7 +192,7 @@ function Mould() {
                     [1]
                   </span>
                   . Its network structure of tiny branches is called Mycelium.
-                  This structure has been talked about in the last decade as
+                  This structure has been talked about in the last decade as a
                   promising sustainable material
                   <span className="footNote" onClick={executeScroll}>
                     [2]
@@ -241,8 +241,8 @@ function Mould() {
                   As positive aspects we mentioned the intelligent growth, the
                   unity and self-sacrifice of small entities for the good of the
                   network and the aesthetic qualities in texture and colour. We
-                  also noted mould contributes to some tasty cheese varieties
-                  and the medicine penicillin. Negative qualities highlighted in
+                  also noted that mould contributes to some tasty cheese varieties
+                  and helped the discovery of penicillin. Negative qualities highlighted in
                   the breakup letter included toxicity, nastiness and parasitism
                   of mould. See both handwritten letters below.
                 </p>
@@ -299,8 +299,8 @@ function Mould() {
                   composition made from synthesized sounds and recorded slime
                   noises, representing both the repulsive and aesthetically
                   pleasing qualities of mould for our first week experience. We
-                  also discussed using multiple flashlights shining from behind
-                  on a canvas of black fabric, turning on each on after another,
+                  also discussed using multiple torches shining from behind
+                  on a canvas of black fabric, turning on each one after another,
                   to express the slow beginning and then exponential growth of a
                   mould network. We then decided last-minute to only play the
                   audio for the presentation. Below is the week one audio
@@ -433,7 +433,7 @@ function Mould() {
                   and some were synthesized digitally; see the full list of
                   sounds below. Each button was labelled with tape and marker to
                   identify the respective meaning. Participants were able to
-                  combine and arrange sounds in a kind of audio installation by
+                  combine and arrange sounds in the audio installation by
                   pressing the buttons. To add depth to the sonic experience, we
                   used two additional speakers playing permanent sound layers in
                   separate areas of the room. These represented darkness (a
@@ -489,7 +489,7 @@ function Mould() {
                 </div>
                 <p>
                   Feedback was generally positive. Other students mentioned they
-                  found the installation calming and meditative, but also earie.
+                  found the installation calming and meditative, but also eerie.
                   Suggestions were to add more of a story line to the sound, to
                   make the sounds more obviously relate to mould and to add more
                   to the physical setting and a communal, shared experience.

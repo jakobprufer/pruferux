@@ -147,9 +147,9 @@ function Disguise() {
               </p>
               <div className="uxSmallTitle">Designers</div>
               <p>
-                <a href="">Kimberly Rodrigues</a>, <a href="">Kuan-Ting Chen</a>{" "}
-                (Marty), <a href="">Mansi Chottani</a>,{" "}
-                <a href="">Wan Ying Liang Chen</a>, Jakob Prüfer
+                <a href="https://kimberlyrodrigues.my.canva.site" target="_blank">Kimberly Rodrigues</a>, <a href="https://blog500070.wixsite.com/martyktdesign/blog" target="_blank">Kuan-Ting Chen</a>{" "}
+                (Marty), <a href="https://readymag.com/u561240559/MansiMAUX/" target="_blank">Mansi Chottani</a>,{" "}
+                Wan Ying Liang Chen, Jakob Prüfer
               </p>
               <div className="uxSmallTitle">Dates</div>
               <p>24/11-08/12/2022</p>

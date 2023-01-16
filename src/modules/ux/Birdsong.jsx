@@ -147,8 +147,8 @@ function Birdsong() {
               </p>
               <div className="uxSmallTitle">Designers</div>
               <p>
-                <a href="">Carlotta Montanari</a>, <a href="">Lingjia Fang</a>,{" "}
-                <a href="">Rebecca Hodge</a>, <a href="">Roshni Suri</a>, Jakob
+                <a href="https://montanaricarlotta.com/" target="_blank">Carlotta Montanari</a>, Lingjia Fang,{" "}
+                <a href="https://www.rebeccahodge.co.uk/blog" target="_blank">Rebecca Hodge</a>, Roshni Suri, Jakob
                 Prüfer
               </p>
               <div className="uxSmallTitle">Dates</div>

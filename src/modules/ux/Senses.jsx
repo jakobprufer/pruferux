@@ -136,8 +136,7 @@ function Senses() {
               </p>
               <div className="uxSmallTitle">Designers</div>
               <p>
-                <a href="">Lingjia Fang</a>, <a href="">Romit Khurd</a>,{" "}
-                <a href="">Yuying Wang</a> (Abbey) , Jakob Prüfer
+                Lingjia Fang, <a href="https://romit-khurd.notion.site/93fa67c50fd84f12bf84abd829dd9e7a?v=c045d378c54a4270b875748ebfe24746" target="_blank">Romit Khurd</a>,{" "}Yuying Wang (Abbey) , Jakob Prüfer
               </p>
               <div className="uxSmallTitle">Dates</div>
               <p>03-13/10/2022</p>
@@ -153,7 +152,7 @@ function Senses() {
               <h3>Week 1</h3>
               <p>
                 The UX of human senses was our first design brief of our MA
-                program. Having just gotten to know each other, Abbey, Lingjia,
+                programme. Having just gotten to know each other, Abbey, Lingjia,
                 Romit and me started with fresh eyes and little clue.
                 Preliminary research revealed to me that nociception, our
                 group’s assigned human sense, is the painful feeling caused by a
@@ -293,7 +292,7 @@ function Senses() {
               </div>
               <p>
                 A difficulty with our allocated sense was that we didn’t want to
-                design anything that would cause considerable physical pain, yet
+                design anything that would cause physical pain, yet
                 the brief asked us to extend nociception beyond the body. While
                 the glove prototype constituted a symbolic representation of
                 this sense, Romit stimulated a different interpretation. Maybe
@@ -346,7 +345,7 @@ function Senses() {
                 </ul>
                 These ideas were very much in the realm of self-development and
                 straight-forward problem-solving instruments. I wasn’t sure
-                whether this was the way we necessarily had to think about our
+                whether this was the way we had to think about our
                 designs; projects that had gotten good feedback in the first
                 week often more resembled artistic installations rather than
                 consumer products.
@@ -430,7 +429,7 @@ function Senses() {
                 nature of the demonstration and the one-person sample size was
                 no scientific proof, instead our focus was on the participant’s
                 experience. We received vivid feedback from the class, mostly
-                with suggestions how we could add to the experiment – this
+                with suggestions how we could add to the setup – this
                 showed that our outcome was not final, but still in the
                 experimental stage.
               </p>
