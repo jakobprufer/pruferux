@@ -1,22 +1,50 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+  Routes,
+  ScrollRestoration,
+} from "react-router-dom";
 import Home from "./modules/pages/Home.jsx";
 import Music from "./modules/pages/Music.jsx";
 import Design from "./modules/pages/Design.jsx";
 import Dj from "./modules/pages/Dj.jsx";
 import Video from "./modules/pages/Video.jsx";
 import Photo from "./modules/pages/Photo.jsx";
-import Projects from "./modules/pages/Projects.jsx";
+import Projects from "./modules/ux/Layouts/Projects";
 import AboutMe from "./modules/pages/AboutMe.jsx";
-import Mould from "./modules/ux/Mould";
-import Senses from "./modules/ux/Senses";
-import UXHome from "./modules/ux/UXHome";
-import Hair from "./modules/ux/Hair";
-import Birdsong from "./modules/ux/Birdsong";
-import Disguise from "./modules/ux/Disguise";
+import Mould from "./modules/ux/Pages/Mould";
+import Senses from "./modules/ux/Pages/Senses";
+import UX from "./modules/ux/UX";
+import Hair from "./modules/ux/Pages/Hair";
+import Disguise from "./modules/ux/Pages/Disguise";
+import ScrollToTop from "./modules/ux/Functional/ScrollToTop";
 // temp
 import NYC from "./modules/pages/NYC";
+import Overview from "./modules/ux/Pages/Overview";
+import UXHome from "./modules/ux/Layouts/UXHome";
+import Birdsong from "./modules/ux/Pages/Birdsong";
+import Outfit from "./modules/ux/Pages/Outfit";
+import Psychogeography from "./modules/ux/Pages/Psychogeography";
+
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path="/ux" element={<UX />}>
+//       <Route index element={<UXHome />} />
+//       <Route path="projects" element={<Projects />}>
+//         <Route path="senses" element={<Senses />} />
+//         <Route path="mould" element={<Mould />} />
+//         <Route path="hair" element={<Hair />} />
+//         <Route path="birdsong" element={<Birdsong />} />
+//         <Route path="disguise" element={<Disguise />} />
+//       </Route>
+//     </Route>
+//   )
+// );
 
 function App() {
   // window.location.href =
@@ -37,19 +65,24 @@ function App() {
   // } else if (window.location.hostname === "ux.prufer.co") {
   // } else {
   // }
-  
+
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/ux" element={<UXHome />} />
-          <Route path="/ux/mould" element={<Mould />} />
-          <Route path="/ux/senses" element={<Senses />} />
-          <Route path="/ux/hair" element={<Hair />} />
-          <Route path="/ux/birdsong" element={<Birdsong />} />
-          <Route path="/ux/disguise" element={<Disguise />} />
-        </Routes>
-      </Router>
+      {/* <RouterProvider router={router} /> */}
+      <Routes>
+        <Route path="/ux" element={<UX />}>
+          <Route index element={<UXHome />} />
+          <Route path="projects" element={<Projects />}>
+            <Route path="senses" element={<Senses />} />
+            <Route path="mould" element={<Mould />} />
+            <Route path="hair" element={<Hair />} />
+            <Route path="birdsong" element={<Birdsong />} />
+            <Route path="disguise" element={<Disguise />} />
+            <Route path="outfit" element={<Outfit />} />
+            <Route path="psychogeography" element={<Psychogeography />} />
+          </Route>
+        </Route>
+      </Routes>
     </div>
   );
 }
