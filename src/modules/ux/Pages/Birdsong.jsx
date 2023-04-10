@@ -67,7 +67,14 @@ function Birdsong() {
             <a href="https://montanaricarlotta.com/" target="_blank">
               Carlotta Montanari
             </a>
-            , Lingjia Fang,{" "}
+            ,{" "}
+            <a
+              href="https://lfang1220211.wixsite.com/lingjia-fang"
+              target="_blank"
+            >
+              Lingjia Fang
+            </a>
+            ,{" "}
             <a href="https://www.rebeccahodge.co.uk/blog" target="_blank">
               Rebecca Hodge
             </a>
@@ -89,15 +96,11 @@ function Birdsong() {
           <p>
             We very much understand the world visually, especially when it comes
             to design. We use the word imagination, derived from the “image”,
-            even when what we imagine are sounds
-            <span className="footNote" onClick={executeScroll}>
-              [1]
-            </span>
-            . All the more inviting was the challenge to design around sound,
-            specifically birdsong in an urban environment. Unlike most animals,
-            birds use identical sounds in patterns like we do with our human
-            phonology - even though the sounds don’t seem to carry the same
-            depth of meaning
+            even when what we imagine are sounds. All the more inviting was the
+            challenge to design around sound, specifically birdsong in an urban
+            environment. Unlike most animals, birds use identical sounds in
+            patterns like we do with our human phonology - even though the
+            sounds don’t seem to carry the same depth of meaning
             <span className="footNote" onClick={executeScroll}>
               [2]
             </span>

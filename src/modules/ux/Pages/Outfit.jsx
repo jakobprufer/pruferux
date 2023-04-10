@@ -67,7 +67,7 @@ function Outfit() {
             , Jakob Prüfer
           </p>
           <div className="uxSmallTitle">Dates</div>
-          <p>16-20/12/2023</p>
+          <p>16-20/01/2023</p>
         </div>
         <main className="uxMain">
           <h3>Process</h3>

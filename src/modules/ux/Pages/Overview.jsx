@@ -243,7 +243,24 @@ function Overview(props) {
             <div className="imgCont169">
               <img
                 src="/images/ux/psychogeography_bs.jpg"
-                alt="A man and woman both wearing black jackets with plastic pipes around them, the man facing away from the camera and wearing a black backpack"
+                alt="An areal top-down view of the Hackney Marshes"
+              />
+            </div>
+          </div>
+        </Link>
+      </div>
+      <div className="uxStickyTitle">
+        <h2>Unit 3: Macro UX</h2>
+      </div>
+      <div className="uxHomeGrid">
+        <Link className="uxPost" to="/ux/projects/macro">
+          <div className="uxSmallTitle">Brief 1</div>
+          <div className="uxPostTitle">Soil Story</div>
+          <div className="uxPostBeauty">
+            <div className="imgCont169">
+              <img
+                src="/images/ux/macro_btemp.jpg"
+                alt="Boxed filled with green plants in a grocery store shelf"
               />
             </div>
           </div>

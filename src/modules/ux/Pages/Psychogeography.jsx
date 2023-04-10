@@ -72,7 +72,7 @@ function Psychogeography() {
             (Beck), Sushil Suresh, Jakob Prufer
           </p>
           <div className="uxSmallTitle">Dates</div>
-          <p>23-27/12/2023</p>
+          <p>23-27/01/2023</p>
         </div>
         <main className="uxMain">
           <h3>Process</h3>
@@ -233,8 +233,8 @@ function Psychogeography() {
             <Link to="/ux/projects/outfit">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux">
-              Back to overview <HiOutlineArrowRight className="hiIcon" />
+            <Link to="/ux/projects/macro">
+              Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>
         </main>

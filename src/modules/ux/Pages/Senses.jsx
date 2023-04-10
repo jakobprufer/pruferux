@@ -53,7 +53,13 @@ function Senses() {
             </p>
             <div className="uxSmallTitle">Designers</div>
             <p>
-              Lingjia Fang,{" "}
+              <a
+                href="https://lfang1220211.wixsite.com/lingjia-fang"
+                target="_blank"
+              >
+                Lingjia Fang
+              </a>
+              ,{" "}
               <a
                 href="https://romit-khurd.notion.site/93fa67c50fd84f12bf84abd829dd9e7a?v=c045d378c54a4270b875748ebfe24746"
                 target="_blank"
