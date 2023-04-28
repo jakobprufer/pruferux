@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: {{ include "pruferco.fullname" . }}
   labels:
-    date: "{{ now | unixEpoch }}"
     {{- include "pruferco.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
@@ -14,16 +13,17 @@ spec:
       {{- include "pruferco.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-    {{- with .Values.podAnnotations }}
       annotations:
+        created: {{ dateInZone "2006-01-02 15:04:05Z" (now) "CET" | quote }}
+        {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
-    {{- end }}
+        {{- end }}
       labels:
         {{- include "pruferco.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
+      {{- if .Values.imagePullSecret }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
+        - name: {{ include "pruferco.fullname" . }}
       {{- end }}
       serviceAccountName: {{ include "pruferco.serviceAccountName" . }}
       securityContext:
@@ -50,10 +50,6 @@ spec:
             initialDelaySeconds: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      {{- if .Values.image.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml .Values.image.imagePullSecrets | nindent 8 }}
-      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
