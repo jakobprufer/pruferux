@@ -27,6 +27,7 @@ docker push ${IMAGE}:latest
 echo ""
 echo "==> deploying k8s: ${K8S_SERVICE} in namespace ${K8S_NAMESPACE}"
 echo ""
+export KUBECONFIG="$DIR/kubeconfig.yml"
 helm upgrade \
 	--install \
 	-n ${K8S_NAMESPACE} \

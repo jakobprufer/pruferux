@@ -13,7 +13,7 @@ function About({
   return (
     <Fragment>
       <div className="uxSidebar">
-        <Link to="/ux">
+        <Link to="/">
           <div className="uxStickyTitleFirst" id="uxlogoTitle">
             <h1 className="uxLogo">
               <b>MA:UX</b>&nbsp;
