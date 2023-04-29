@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useRef } from "react";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import Image from "react-image-enlarger";
 import { Link } from "react-router-dom";
@@ -220,10 +219,10 @@ function Outfit() {
             />
           </div>
           <div className="bottomNav">
-            <Link to="/ux/projects/disguise">
+            <Link to="/projects/disguise">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux/projects/psychogeography">
+            <Link to="/projects/psychogeography">
               Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>

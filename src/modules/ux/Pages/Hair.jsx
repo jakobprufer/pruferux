@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import classNames from "classnames";
+import React, { useRef } from "react";
 import Image from "react-image-enlarger";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -325,10 +324,10 @@ function Hair() {
             </li>
           </ul>
           <div className="bottomNav">
-            <Link to="/ux/projects/mould">
+            <Link to="/projects/mould">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux/projects/birdsong">
+            <Link to="/projects/birdsong">
               Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>

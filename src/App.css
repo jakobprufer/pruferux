@@ -120,7 +120,7 @@
 
 .logo {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
 }
@@ -368,7 +368,7 @@
       height: 0px;
       min-width: 100%;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
     }
     
   .specialDate {

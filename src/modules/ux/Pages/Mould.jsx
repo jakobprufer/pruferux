@@ -406,10 +406,10 @@ function Mould() {
             </ul>
           </p>
           <div className="bottomNav">
-            <Link to="/ux/projects/senses">
+            <Link to="/projects/senses">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux/projects/hair">
+            <Link to="/projects/hair">
               Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>

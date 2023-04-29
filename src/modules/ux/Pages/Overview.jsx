@@ -1,6 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import HoverVideoPlayer from "react-hover-video-player";
+import React, {  useRef } from "react";
 import { Link } from "react-router-dom";
 
 function Overview(props) {
@@ -18,7 +16,7 @@ function Overview(props) {
         <h2>Favourite Projects</h2>
       </div>
       <div className="uxHomeGrid">
-        <Link className="uxPost" ref={birdsongPost1} to="/ux/projects/birdsong">
+        <Link className="uxPost" ref={birdsongPost1} to="/projects/birdsong">
           <div className="uxSmallTitle">Unit 1</div>
           <div className="uxPostTitle">UX of Birdsong</div>
           <div className="uxPostBeauty">
@@ -46,7 +44,7 @@ function Overview(props) {
             </div>
           </div>
         </Link>
-        <Link className="uxPost" ref={disguisePost1} to="/ux/projects/disguise">
+        <Link className="uxPost" ref={disguisePost1} to="/projects/disguise">
           <div className="uxSmallTitle">Unit 1</div>
           <div className="uxPostTitle">UX of Disguise</div>
           <div className="uxPostBeauty">
@@ -79,7 +77,7 @@ function Overview(props) {
         <h2>Unit 1: UX Studio Practices</h2>
       </div>
       <div className="uxHomeGrid">
-        <Link to="/ux/projects/senses" className="uxPost" ref={sensesPost}>
+        <Link to="/projects/senses" className="uxPost" ref={sensesPost}>
           <div className="uxSmallTitle">Brief 1</div>
           <div className="uxPostTitle">UX of Human Senses</div>
           <div className="uxPostBeauty">
@@ -107,7 +105,7 @@ function Overview(props) {
             </div>
           </div>
         </Link>
-        <Link className="uxPost" ref={mouldPost} to="/ux/projects/mould">
+        <Link className="uxPost" ref={mouldPost} to="/projects/mould">
           <div className="uxSmallTitle">Brief 2</div>
           <div className="uxPostTitle">UX of Mould</div>
           <div className="uxPostBeauty">
@@ -135,7 +133,7 @@ function Overview(props) {
             </div>
           </div>
         </Link>
-        <Link className="uxPost" to="/ux/projects/hair" ref={hairPost}>
+        <Link className="uxPost" to="/projects/hair" ref={hairPost}>
           <div className="uxSmallTitle">Brief 3</div>
           <div className="uxPostTitle">UX of Hair</div>
           <div className="uxPostBeauty">
@@ -163,7 +161,7 @@ function Overview(props) {
             </div>
           </div>
         </Link>
-        <Link className="uxPost" ref={birdsongPost} to="/ux/projects/birdsong">
+        <Link className="uxPost" ref={birdsongPost} to="/projects/birdsong">
           <div className="uxSmallTitle">Brief 4</div>
           <div className="uxPostTitle">UX of Birdsong</div>
           <div className="uxPostBeauty">
@@ -191,7 +189,7 @@ function Overview(props) {
             </div>
           </div>
         </Link>
-        <Link className="uxPost" ref={disguisePost} to="/ux/projects/disguise">
+        <Link className="uxPost" ref={disguisePost} to="/projects/disguise">
           <div className="uxSmallTitle">Brief 5</div>
           <div className="uxPostTitle">UX of Disguise</div>
           <div className="uxPostBeauty">
@@ -224,7 +222,7 @@ function Overview(props) {
         <h2>Unit 2: Collaborative Unit</h2>
       </div>
       <div className="uxHomeGrid">
-        <Link className="uxPost" to="/ux/projects/outfit">
+        <Link className="uxPost" to="/projects/outfit">
           <div className="uxSmallTitle">Brief 1</div>
           <div className="uxPostTitle">Survival of the Outfit</div>
           <div className="uxPostBeauty">
@@ -236,7 +234,7 @@ function Overview(props) {
             </div>
           </div>
         </Link>
-        <Link className="uxPost" to="/ux/projects/psychogeography">
+        <Link className="uxPost" to="/projects/psychogeography">
           <div className="uxSmallTitle">Brief 2</div>
           <div className="uxPostTitle">Digital Psychogeography</div>
           <div className="uxPostBeauty">
@@ -253,7 +251,7 @@ function Overview(props) {
         <h2>Unit 3: Macro UX</h2>
       </div>
       <div className="uxHomeGrid">
-        <Link className="uxPost" to="/ux/projects/macro">
+        <Link className="uxPost" to="/projects/macro">
           <div className="uxSmallTitle">Brief 1</div>
           <div className="uxPostTitle">Soil Story</div>
           <div className="uxPostBeauty">

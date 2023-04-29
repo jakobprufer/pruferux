@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import classNames from "classnames";
+import React, { useRef } from "react";
 import Image from "react-image-enlarger";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -418,10 +417,10 @@ function Disguise() {
             <li>Regular snacks skyrocket the team morale.</li>
           </ul>
           <div className="bottomNav">
-            <Link to="/ux/projects/birdsong">
+            <Link to="/projects/birdsong">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux/projects/outfit">
+            <Link to="/projects/outfit">
               Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>

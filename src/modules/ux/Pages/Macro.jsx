@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useRef } from "react";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import Image from "react-image-enlarger";
 import { Link } from "react-router-dom";
@@ -603,10 +602,10 @@ function Macro() {
             projects.
           </p>
           <div className="bottomNav">
-            <Link to="/ux/projects/psychogeography">
+            <Link to="/projects/psychogeography">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux">
+            <Link to="/">
               Back to overview <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>

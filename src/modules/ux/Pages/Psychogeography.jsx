@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useRef } from "react";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import Image from "react-image-enlarger";
 import { Link } from "react-router-dom";
@@ -230,10 +229,10 @@ function Psychogeography() {
             team also appreciated the many different senses triggered.
           </p>
           <div className="bottomNav">
-            <Link to="/ux/projects/outfit">
+            <Link to="/projects/outfit">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/ux/projects/macro">
+            <Link to="/projects/macro">
               Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>

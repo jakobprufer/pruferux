@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import classNames from "classnames";
+import React, { Fragment, useRef } from "react";
 import Image from "react-image-enlarger";
 import { HiOutlineArrowRight, HiOutlineArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -374,10 +373,10 @@ function Senses() {
               </ul>
             </p>
             <div className="bottomNav">
-              <Link to="/ux">
+              <Link to="/">
                 <HiOutlineArrowLeft className="hiIcon" /> Back to overview
               </Link>
-              <Link to="/ux/projects/mould">
+              <Link to="/projects/mould">
                 Next brief <HiOutlineArrowRight className="hiIcon" />
               </Link>
             </div>

@@ -1,9 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classNames from "classnames";
-import { NavLink, Link, useLocation } from "react-router-dom";
-import { WiMoonFull, WiMoonAltWaxingGibbous4, WiMoonNew } from "react-icons/wi";
-import { RiArrowLeftLine } from "react-icons/ri";
-import { HiOutlineArrowLeft } from "react-icons/hi";
+import { NavLink, Link } from "react-router-dom";
 import { BsArrowLeftShort } from "react-icons/bs";
 
 export default function Nav() {
@@ -55,7 +52,7 @@ export default function Nav() {
 
   return (
     <div className="uxSidebar">
-      <Link to="/ux">
+      <Link to="/">
         <h1 className="uxStickyTitleFirst" id="uxlogoTitle">
           <div className="uxLogo">
             <b>MA:UX</b>&nbsp;
@@ -71,7 +68,7 @@ export default function Nav() {
       <div className="uxSidebarText">
         <nav className="uxNav">
           <div className="uxNavSection">
-            <Link to="/ux">
+            <Link to="/">
               <BsArrowLeftShort className="uxBackArrow" />
               {/* <svg
                 className="myIcon"
@@ -145,19 +142,19 @@ export default function Nav() {
               Unit 1: UX Studio Practices
             </div>
             <div className={U1Open ? "uxIntroIn" : "uxIntroOut"}>
-              <NavLink to="/ux/projects/senses" className="uxNavProject">
+              <NavLink to="/projects/senses" className="uxNavProject">
                 UX of Human Senses
               </NavLink>
-              <NavLink to="/ux/projects/mould" className="uxNavProject">
+              <NavLink to="/projects/mould" className="uxNavProject">
                 UX of Mould
               </NavLink>
-              <NavLink to="/ux/projects/hair" className="uxNavProject">
+              <NavLink to="/projects/hair" className="uxNavProject">
                 UX of Hair
               </NavLink>
-              <NavLink to="/ux/projects/birdsong" className="uxNavProject">
+              <NavLink to="/projects/birdsong" className="uxNavProject">
                 UX of Birdsong
               </NavLink>
-              <NavLink to="/ux/projects/disguise" className="uxNavProject">
+              <NavLink to="/projects/disguise" className="uxNavProject">
                 UX of Disguise
               </NavLink>
             </div>
@@ -207,11 +204,11 @@ export default function Nav() {
               Unit 2: Collaborative Unit
             </div>
             <div className={U2Open ? "uxIntroIn" : "uxIntroOut"}>
-              <NavLink to="/ux/projects/outfit" className="uxNavProject">
+              <NavLink to="/projects/outfit" className="uxNavProject">
                 Survival of the Outfit
               </NavLink>
               <NavLink
-                to="/ux/projects/psychogeography"
+                to="/projects/psychogeography"
                 className="uxNavProject"
               >
                 Digital Psychogeography
@@ -263,7 +260,7 @@ export default function Nav() {
               Unit 3: Macro UX
             </div>
             <div className={U3Open ? "uxIntroIn" : "uxIntroOut"}>
-              <NavLink to="/ux/projects/macro" className="uxNavProject">
+              <NavLink to="/projects/macro" className="uxNavProject">
                 Soil Story
               </NavLink>
             </div>
