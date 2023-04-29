@@ -1,6 +1,6 @@
 {{- range .Values.ingress -}}
 {{- if (.enabled | default true) -}}
-{{- $fullName := include "pruferco.fullname" $ -}}
+{{- $fullName := include "pruferux.fullname" $ -}}
 {{- $svcPort := $.Values.service.port -}}
 {{- if and .className (not (semverCompare ">=1.18-0" $.Capabilities.KubeVersion.GitVersion)) }}
   {{- if not (hasKey .annotations "kubernetes.io/ingress.class") }}
@@ -19,7 +19,7 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}-{{ .name }}
   labels:
-    {{- include "pruferco.labels" $ | nindent 4 }}
+    {{- include "pruferux.labels" $ | nindent 4 }}
   {{- with .annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}

@@ -14,9 +14,9 @@ set +o allexport
 echo ""
 echo "==> building container"
 echo ""
-docker build --platform linux/amd64 -t prufer .
+docker build --platform linux/amd64 -t pruferux .
 IMAGE="${DOCKER_CR}/prufer/${DOCKER_IMAGE}"
-docker tag prufer:latest ${IMAGE}:latest
+docker tag pruferux:latest ${IMAGE}:latest
 
 echo ""
 echo "==> pushing ${IMAGE} to ${DOCKER_CR}"
@@ -34,10 +34,9 @@ helm upgrade \
 	--set "imagePullSecret.registry=https://${DOCKER_CR}" \
 	--set "imagePullSecret.user=${DOCKER_USER}" \
 	--set "imagePullSecret.password=${DOCKER_PASS}" \
-	--set "image.repository=cr.romnn.com/prufer/pruferco" \
 	--set "image.pullPolicy=Always" \
 	--set "image.tag=latest" \
 	--set "image.repository=${IMAGE}" \
-	${K8S_SERVICE} ./deployment/helm/pruferco/
+	${K8S_SERVICE} ./deployment/helm/pruferux/
 
 exit 0

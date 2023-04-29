@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "pruferco.fullname" . }}
+  name: {{ include "pruferux.fullname" . }}
   labels:
-    {{- include "pruferco.labels" . | nindent 4 }}
+    {{- include "pruferux.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "pruferco.fullname" . }}
+    name: {{ include "pruferux.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

@@ -2,15 +2,15 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "pruferco.name" -}}
+{{- define "pruferux.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Define the redis pvc name
 */}}
-{{- define "pruferco.redis-pvc" -}}
-{{- default .Values.persistence.claimName (printf "%s-redis-pvc" (include "pruferco.name" .)) }}
+{{- define "pruferux.redis-pvc" -}}
+{{- default .Values.persistence.claimName (printf "%s-redis-pvc" (include "pruferux.name" .)) }}
 {{- end }}
 
 {{/*
@@ -18,7 +18,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "pruferco.fullname" -}}
+{{- define "pruferux.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -34,16 +34,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "pruferco.chart" -}}
+{{- define "pruferux.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "pruferco.labels" -}}
-helm.sh/chart: {{ include "pruferco.chart" . }}
-{{ include "pruferco.selectorLabels" . }}
+{{- define "pruferux.labels" -}}
+helm.sh/chart: {{ include "pruferux.chart" . }}
+{{ include "pruferux.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -53,17 +53,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "pruferco.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "pruferco.name" . }}
+{{- define "pruferux.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "pruferux.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "pruferco.serviceAccountName" -}}
+{{- define "pruferux.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "pruferco.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "pruferux.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "pruferco.fullname" . }}
+  name: {{ include "pruferux.fullname" . }}
   labels:
-    {{- include "pruferco.labels" . | nindent 4 }}
+    {{- include "pruferux.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "pruferco.selectorLabels" . | nindent 6 }}
+      {{- include "pruferux.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
@@ -19,13 +19,13 @@ spec:
         {{- toYaml . | nindent 8 }}
         {{- end }}
       labels:
-        {{- include "pruferco.selectorLabels" . | nindent 8 }}
+        {{- include "pruferux.selectorLabels" . | nindent 8 }}
     spec:
       {{- if .Values.imagePullSecret }}
       imagePullSecrets:
-        - name: {{ include "pruferco.fullname" . }}
+        - name: {{ include "pruferux.fullname" . }}
       {{- end }}
-      serviceAccountName: {{ include "pruferco.serviceAccountName" . }}
+      serviceAccountName: {{ include "pruferux.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
