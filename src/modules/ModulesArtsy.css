@@ -1,72 +1,72 @@
 .headerBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .logoBar {
-    position: relative;
-    padding: 1rem 2rem 0rem 2rem;
-    background-color: yellow;
-    z-index: 10;
+  position: relative;
+  padding: 1rem 2rem 0rem 2rem;
+  background-color: yellow;
+  z-index: 10;
 }
 
 .logoContainer {
-    border-bottom: 1px solid black;
-    padding: 1rem 0rem;
-    display: flex;
-    justify-content: space-between;
-    background-color: gold;
+  border-bottom: 1px solid black;
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: gold;
 }
 
 .sortMenuUp {
-    position: relative;
-    top: -4rem;
-    height: 0rem;
-    overflow: hidden;
-    padding: 0rem 2rem;
-    line-height: 2rem;
-    text-align: right;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    z-index: 9;
-    background-color: aquamarine;
-    transition: 0.2s;
+  position: relative;
+  top: -4rem;
+  height: 0rem;
+  overflow: hidden;
+  padding: 0rem 2rem;
+  line-height: 2rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  z-index: 9;
+  background-color: aquamarine;
+  transition: 0.2s;
 }
 
 .sortMenuDown {
-    position: relative;
-    top: 0rem;
-    height: 8rem;
-    overflow: hidden;
-    padding: 1rem 2rem;
-    line-height: 2rem;
-    text-align: right;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    z-index: 9;
-    background-color: aquamarine;
-    transition: 0.2s;
+  position: relative;
+  top: 0rem;
+  height: 8rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  z-index: 9;
+  background-color: aquamarine;
+  transition: 0.2s;
 }
 
 .sortItem {
-    background-color: bisque;
+  background-color: bisque;
 }
 
 .filterBar {
-    padding: 0rem 2rem;
-    background-color: lightblue;
+  padding: 0rem 2rem;
+  background-color: lightblue;
 }
 
 .filterContainer {
-    position: relative;
-    padding: 1rem 0rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 8;
-    background-color: aqua;
+  position: relative;
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 8;
+  background-color: aqua;
 }

@@ -207,10 +207,7 @@ export default function Nav() {
               <NavLink to="/projects/outfit" className="uxNavProject">
                 Survival of the Outfit
               </NavLink>
-              <NavLink
-                to="/projects/psychogeography"
-                className="uxNavProject"
-              >
+              <NavLink to="/projects/psychogeography" className="uxNavProject">
                 Digital Psychogeography
               </NavLink>
             </div>

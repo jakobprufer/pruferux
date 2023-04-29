@@ -1,9 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  Route,
-  Routes,
-} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Projects from "./modules/ux/Layouts/Projects";
 import Mould from "./modules/ux/Pages/Mould";
 import Senses from "./modules/ux/Pages/Senses";
