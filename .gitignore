@@ -2,6 +2,9 @@ kubeconfig.*
 deploy.env
 debug.*
 
+# exclude assets
+public/images
+
 # dependencies
 /node_modules
 /.pnp
