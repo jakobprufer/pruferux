@@ -57,6 +57,10 @@ ingress:
         paths:
           - path: /
             pathType: ImplementationSpecific
+      - host: www.pruferux.com
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
       - host: ux.prufer.co
         paths:
           - path: /
@@ -69,6 +73,7 @@ ingress:
       - secretName: pruferux.com
         hosts:
           - pruferux.com
+          - www.pruferux.com
 
 
 resources:
