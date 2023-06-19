@@ -605,8 +605,8 @@ function Macro() {
             <Link to="/projects/psychogeography">
               <HiOutlineArrowLeft className="hiIcon" /> Previous brief
             </Link>
-            <Link to="/">
-              Back to overview <HiOutlineArrowRight className="hiIcon" />
+            <Link to="/projects/micro">
+              Next brief <HiOutlineArrowRight className="hiIcon" />
             </Link>
           </div>
           <h3>References</h3>

@@ -139,8 +139,8 @@ function About({
                 CV
               </a>{" "}
               /{" "}
-              <a href="https://prufer.myportfolio.com" target="_blank">
-                Design portfolio
+              <a href="https://prufer.co" target="_blank">
+                Website
               </a>
             </div>
           </p>

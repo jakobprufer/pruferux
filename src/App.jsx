@@ -12,6 +12,7 @@ import Birdsong from "./modules/ux/Pages/Birdsong";
 import Outfit from "./modules/ux/Pages/Outfit";
 import Psychogeography from "./modules/ux/Pages/Psychogeography";
 import Macro from "./modules/ux/Pages/Macro";
+import Micro from "./modules/ux/Pages/Micro";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="outfit" element={<Outfit />} />
             <Route path="psychogeography" element={<Psychogeography />} />
             <Route path="macro" element={<Macro />} />
+            <Route path="micro" element={<Micro />} />
           </Route>
         </Route>
       </Routes>

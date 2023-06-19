@@ -72,6 +72,18 @@ function Overview(props) {
             </div>
           </div>
         </Link>
+        <Link className="uxPost" to="/projects/micro">
+          <div className="uxSmallTitle">Unit 4</div>
+          <div className="uxPostTitle">Saige - Conversation Rehearsal AI</div>
+          <div className="uxPostBeauty">
+            <div className="imgCont169">
+              <img
+                src="/images/ux/micro_bs.jpg"
+                alt="Boxed filled with green plants in a grocery store shelf"
+              />
+            </div>
+          </div>
+        </Link>
       </div>
       <div className="uxStickyTitle">
         <h2>Unit 1: UX Studio Practices</h2>
@@ -258,6 +270,23 @@ function Overview(props) {
             <div className="imgCont169">
               <img
                 src="/images/ux/macro_btemp.jpg"
+                alt="Boxed filled with green plants in a grocery store shelf"
+              />
+            </div>
+          </div>
+        </Link>
+      </div>
+      <div className="uxStickyTitle">
+        <h2>Unit 4: Micro UX</h2>
+      </div>
+      <div className="uxHomeGrid">
+        <Link className="uxPost" to="/projects/micro">
+          <div className="uxSmallTitle">Brief 1</div>
+          <div className="uxPostTitle">Saige - Conversation Rehearsal AI</div>
+          <div className="uxPostBeauty">
+            <div className="imgCont169">
+              <img
+                src="/images/ux/micro_bs.jpg"
                 alt="Boxed filled with green plants in a grocery store shelf"
               />
             </div>
