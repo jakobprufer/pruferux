@@ -514,7 +514,11 @@ function Macro() {
             cooking AI; a lot of the week we spent debating and attempting to
             integrate new thoughts with existing concepts while trying to
             understand each other’s doubts and criticisms; observations from
-            this stage are also discussed in my Essay for this term.
+            this stage are also discussed in my{" "}
+            <a href="https://prufer.co/writing/discussingideas" target="_blank">
+              essay
+            </a>{" "}
+            for this term.
           </p>
           <p>
             Feedback for the dating idea was positive and the course team liked
