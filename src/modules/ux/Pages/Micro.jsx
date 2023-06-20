@@ -59,7 +59,14 @@ function Macro() {
             >
               Ruoxi Song
             </a>{" "}
-            (Roxy), Tanya Singh, Jakob Prufer
+            (Roxy),{" "}
+            <a
+              href="https://www.notion.so/tanyadoesux/R-GA-Generative-AI-e6d7089d2b274d799cf75b051f00e117?pvs=4"
+              target="_blank"
+            >
+              Tanya Singh
+            </a>{" "}
+            , Jakob Prufer
           </p>
           <div className="uxSmallTitle">Dates</div>
           <p>20/04-08/06/2023</p>
